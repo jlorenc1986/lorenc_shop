@@ -2,7 +2,6 @@ var should = require('should');
 var request = require('supertest');
 var assert = require('assert');
 var express = require('express');
-var app = express();
 
 request = request('http://localhost:3000');
 
