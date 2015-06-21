@@ -23,6 +23,6 @@ node_modules/
 coverage
 
 .idea
-
+data
 # Benchmarking
 benchmarks/graphs

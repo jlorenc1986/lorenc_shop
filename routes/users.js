@@ -3,7 +3,15 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+
+    var db = req.db;
+    var collection = db.get('usercolletion');
+    collection.find({}, {}, function(e, docs){
+
+        res.status(200).json({
+            "userlist": docs
+        });
+    });
 });
 
 module.exports = router;
