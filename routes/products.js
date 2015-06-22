@@ -4,9 +4,29 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET product list. */
 router.get('/', function(req, res, next) {
-   res.json({ name : 'lorenc'});
+    var db = req.db;
+    var collection = db.get('productcollection');
+    collection.find({}, {}, function(e, product){
+
+        res.status(200).json({
+            "product": product
+        });
+    });
+
+});
+/* GET specific product. */
+router.get('/:id', function(req, res, next) {
+    var db = req.db;
+    var collection = db.get('productcollection');
+    collection.find({'id' : req.params.id*1 }, {}, function(e, product){
+
+        res.status(200).json({
+            "product": product
+        });
+    });
+
 });
 
 module.exports = router;
