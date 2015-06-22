@@ -14,12 +14,29 @@ describe('GET /users', function () {
     });
 });
 
+describe('GET /users/:id', function () {
+
+    it('respond with json', function (done) {
+
+
+        request.get('/users/1').set('Accept', 'application/json').expect('Content-Type', /json/).expect(200, done);
+    });
+});
+
 describe('GET /products', function () {
 
     it('respond with json', function (done) {
 
 
         request.get('/products').set('Accept', 'application/json').expect('Content-Type', /json/).expect(200, done);
+    });
+});
+describe('GET /products/:id', function () {
+
+    it('respond with json', function (done) {
+
+
+        request.get('/products/1').set('Accept', 'application/json').expect('Content-Type', /json/).expect(200, done);
     });
 });
 

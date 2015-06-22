@@ -6,15 +6,20 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 
+
 var app = express();
 
 //database
 
 var mongo = require('mongo');
 var monk  = require('monk');
+//var mongoose = require('mongoose');
 var db    = monk('localhost:27017/lorenc_shop');
 
+// load models
+//var user = require('./model/users');
 
+// routes
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var products = require('./routes/products');
