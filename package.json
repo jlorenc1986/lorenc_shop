@@ -19,6 +19,9 @@
     "bootstrap": "^3.3.5",
     "dateformat": "^1.0.11",
     "ejs": "^2.3.1",
+    "gulp-react": "^3.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-watch": "^4.2.4",
     "jquery": "^2.1.4",
     "mocha": "^2.2.5",
     "moment": "^2.10.3",
@@ -26,6 +29,8 @@
     "mongoose": "^3.8.23",
     "monk": "^1.0.1",
     "pg": "^4.4.0",
+    "react": "^0.13.3",
+    "react-tools": "^0.13.3",
     "should": "^7.0.1",
     "supertest": "^1.0.1",
     "winston": "^1.0.0"
