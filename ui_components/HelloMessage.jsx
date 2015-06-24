@@ -1,6 +1,6 @@
 /* @jsx REACT.DOM */
 
-var HelloMessage = React.class({
+var HelloMessage = React.createClass({
 
     click:function(){
         console.log('clicked');
@@ -11,6 +11,6 @@ var HelloMessage = React.class({
 });
 
 
-var parent = document.getElementById('viewContainer');
+var parent = document.getElementById("viewContainer");
 
-React.renderComponent(<HelloMessage name="lorenc"/>, parent);
+React.render(<HelloMessage name="lorenc"/>, parent);

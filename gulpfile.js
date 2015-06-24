@@ -5,7 +5,7 @@ var react = require('gulp-react');
 
 
 gulp.task('react', function () {
-    return gulp.src('./ui_components/*.jsx').pipe(sourcemaps.init()).pipe(react()).pipe(sourcemaps.write('.')).pipe(gulp.dest('./public/javascripts/components/'));
+    return gulp.src('./ui_components/*.jsx').pipe(react()).pipe(gulp.dest('./public/javascripts/components/'));
 });
 
 

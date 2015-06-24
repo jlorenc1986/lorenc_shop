@@ -1,6 +1,6 @@
 /* @jsx REACT.DOM */
 
-var HelloMessage = React.class({
+var HelloMessage = React.createClass({displayName: "HelloMessage",
 
     click:function(){
         console.log('clicked');
@@ -11,7 +11,6 @@ var HelloMessage = React.class({
 });
 
 
-var parent = document.getElementById('viewContainer');
+var parent = document.getElementById("viewContainer");
 
-React.renderComponent(React.createElement(HelloMessage, {name: "lorenc"}), parent);
-//# sourceMappingURL=HelloMessage.js.map
+React.render(React.createElement(HelloMessage, {name: "lorenc"}), parent);
