@@ -12,8 +12,7 @@ Crud application in full Javascript (BE-FE)
 
 ## Development
 
-1. run gulp for frontend assets
-2. run node app.js for backend
+1. run gulp develop
 
 
 ## Testing
