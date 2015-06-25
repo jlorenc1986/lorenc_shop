@@ -18,12 +18,12 @@ gulp.task('watch', function(){
 gulp.task('develop', function(){
     nodemon({ script: 'bin/www'
         , ext: 'html js jsx'
-        , tasks: ['react'] })
+    })
         .on('restart', function () {
             console.log('restarted!')
         })
 });
 
-gulp.task('default', ['react', 'watch']);
+gulp.task('default', ['develop','react', 'watch']);
 
 
