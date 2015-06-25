@@ -7,9 +7,13 @@ Crud application in full Javascript (BE-FE)
 
 1. Clone repository
 2. run npm install
-3. run mogodb --dbpath data/
 4. run node app.js to start the application
 
+
+## Development
+
+1. run gulp for frontend assets
+2. run node app.js for backend
 
 
 ## Testing
