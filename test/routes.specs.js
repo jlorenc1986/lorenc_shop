@@ -3,6 +3,8 @@ var request = require('supertest');
 var assert = require('assert');
 var express = require('express');
 
+
+// set the request to the development enviroment
 request = request('http://localhost:3000');
 
 describe('GET /users', function () {
