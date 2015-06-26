@@ -2,24 +2,40 @@
 
 var Offer = React.createClass({displayName: "Offer",
 
-    click:function(){
+    click:function() {
         console.log(' Offer clicked');
     },
-    render: function(){
-        return React.createElement("table", null, 
+
+    render: function() {
+        return React.createElement("table", {className: "table table-hover"}, 
             React.createElement("thead", null, 
                 React.createElement("tr", null, 
-                    React.createElement("th", null, " id "), 
+                    React.createElement("th", null, " id  "), 
                     React.createElement("th", null, " name "), 
                     React.createElement("th", null, " price ")
                 )
             ), 
-            "Offer id: ", this.props.id
+            React.createElement("tbody", null, 
+
+                React.createElement("tr", null, 
+                        React.createElement("td", null, " ",  this.props.id, " "), 
+                        React.createElement("td", null, " ",  this.props.name, " "), 
+                        React.createElement("td", null, " ",  this.props.price, " ")
+                ), "ga", 
+
+                React.createElement("tr", null, 
+                        React.createElement("td", null, " ",  this.props.id, " "), 
+                        React.createElement("td", null, " ",  this.props.name, " "), 
+                        React.createElement("td", null, " ",  this.props.price, " ")
+                ), 
+
+                React.createElement("tr", null, 
+                        React.createElement("td", null, " ",  this.props.id, " "), 
+                        React.createElement("td", null, " ",  this.props.name, " "), 
+                        React.createElement("td", null, " ",  this.props.price, " ")
+                )
+
+            )
         )
     }
 });
-
-
-var parent = document.getElementById("viewContainer");
-
-React.render(React.createElement(Offer, {id: "1", name: "offer1", price: "13"}), parent);

@@ -2,24 +2,40 @@
 
 var Offer = React.createClass({
 
-    click:function(){
+    click:function() {
         console.log(' Offer clicked');
     },
-    render: function(){
-        return <table>
+
+    render: function() {
+        return <table className="table table-hover">
             <thead>
                 <tr>
-                    <th> id </th>
+                    <th> id  </th>
                     <th> name </th>
                     <th> price </th>
                 </tr>
             </thead>
-            Offer id: {this.props.id}
+            <tbody>
+
+                <tr>
+                        <td> { this.props.id } </td>
+                        <td> { this.props.name } </td>
+                        <td> { this.props.price } </td>
+                </tr>ga
+
+                <tr>
+                        <td> { this.props.id } </td>
+                        <td> { this.props.name } </td>
+                        <td> { this.props.price } </td>
+                </tr>
+
+                <tr>
+                        <td> { this.props.id } </td>
+                        <td> { this.props.name } </td>
+                        <td> { this.props.price } </td>
+                </tr>
+
+            </tbody>
         </table>
     }
 });
-
-
-var parent = document.getElementById("viewContainer");
-
-React.render(<Offer id="1" name="offer1" price="13" />, parent);

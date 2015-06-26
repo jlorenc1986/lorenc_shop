@@ -2,18 +2,14 @@
 
 var OfferBox = React.createClass({
 
-    click:function(){
+    click:function() {
         console.log('clicked');
     },
-    render: function(){
-        return <div onClick={this.click}>
-            Hello {this.props.name}
-            <Offer/>
+
+    render: function() {
+        return <div className="box">
+            List of {this.props.name}
+            <Offer name="ciao" id="1" price="33" />
         </div>
     }
 });
-
-
-var parent = document.getElementById("viewContainer");
-
-React.render(<OfferBox name="lorenc"/>, parent);
