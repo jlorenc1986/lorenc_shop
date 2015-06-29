@@ -3,13 +3,16 @@
 var OfferBox = React.createClass({
 
     click:function() {
-        console.log('clicked');
+        console.log('offerBox Clicked');
     },
 
     render: function() {
-        return <div className="box">
-            List of {this.props.name}
-            <Offer name="ciao" id="1" price="33" />
+
+        var offers =this.props.data;
+
+
+        return <div className="offerBox">
+
         </div>
     }
 });
