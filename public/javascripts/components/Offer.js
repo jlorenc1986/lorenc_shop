@@ -21,19 +21,8 @@ var Offer = React.createClass({displayName: "Offer",
                         React.createElement("td", null, " ",  this.props.id, " "), 
                         React.createElement("td", null, " ",  this.props.name, " "), 
                         React.createElement("td", null, " ",  this.props.price, " ")
-                ), "ga", 
-
-                React.createElement("tr", null, 
-                        React.createElement("td", null, " ",  this.props.id, " "), 
-                        React.createElement("td", null, " ",  this.props.name, " "), 
-                        React.createElement("td", null, " ",  this.props.price, " ")
-                ), 
-
-                React.createElement("tr", null, 
-                        React.createElement("td", null, " ",  this.props.id, " "), 
-                        React.createElement("td", null, " ",  this.props.name, " "), 
-                        React.createElement("td", null, " ",  this.props.price, " ")
                 )
+
 
             )
         )

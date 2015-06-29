@@ -21,19 +21,8 @@ var Offer = React.createClass({
                         <td> { this.props.id } </td>
                         <td> { this.props.name } </td>
                         <td> { this.props.price } </td>
-                </tr>ga
-
-                <tr>
-                        <td> { this.props.id } </td>
-                        <td> { this.props.name } </td>
-                        <td> { this.props.price } </td>
                 </tr>
 
-                <tr>
-                        <td> { this.props.id } </td>
-                        <td> { this.props.name } </td>
-                        <td> { this.props.price } </td>
-                </tr>
 
             </tbody>
         </table>

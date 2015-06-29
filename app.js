@@ -13,17 +13,20 @@ var app = express();
 
 var mongo = require('mongo');
 var monk  = require('monk');
+
 //var mongoose = require('mongoose');
 var db    = monk('localhost:27017/lorenc_shop');
 
 // load models
-//var user = require('./model/users');
+
 
 // routes
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var products = require('./routes/products');
+var routes, users, products, offers;
 
+routes = require('./routes/index');
+users = require('./routes/users');
+products = require('./routes/products');
+offers = require('./routes/offers');
 
 // Make our db accessible to our router
 app.use(function(req,res,next){
@@ -34,6 +37,7 @@ app.use(function(req,res,next){
 app.use('/', routes);
 app.use('/users', users);
 app.use('/products', products);
+app.use('/offers', offers);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

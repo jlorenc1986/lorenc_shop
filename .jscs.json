@@ -17,10 +17,6 @@
   "disallowMultipleLineBreaks": true,
   "disallowKeywordsOnNewLine": [ "else" ],
   "requireLineFeedAtFileEnd": true,
-  "disallowSpaceAfterObjectKeys": true,
   "requireSpaceAfterLineComment": { "allExcept": ["#", "="] },
-  "requireSpacesInsideObjectBrackets": {
-    "allExcept": [ "}", ")" ]
-  },
   "validateLineBreaks": "LF"
 }

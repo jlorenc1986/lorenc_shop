@@ -42,3 +42,25 @@ describe('GET /products/:id', function () {
     });
 });
 
+describe('GET /offers', function () {
+
+    it('respond with json', function (done) {
+
+
+        request.get('/offers').set('Accept', 'application/json').expect('Content-Type', /json/).expect(200, done);
+    });
+
+});
+
+describe('GET /offers/list, most updated offers', function () {
+
+    it('respond with json', function (done) {
+
+
+        request.get('/offers/list').set('Accept', 'application/json').expect('Content-Type', /json/).expect(200, done);
+    });
+
+});
+
+
+
