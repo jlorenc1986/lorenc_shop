@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/jlorenc1986/lorenc_shop.png?label=ready&title=Ready)](https://waffle.io/jlorenc1986/lorenc_shop)
 # lorenc_shop
 
 Crud application in full Javascript (BE-FE)
