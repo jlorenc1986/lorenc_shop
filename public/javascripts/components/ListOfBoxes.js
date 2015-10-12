@@ -32,16 +32,8 @@ var ListOfBoxes = React.createClass({displayName: "ListOfBoxes",
         render: function() {
             var list = this.state.data;
 
-            return React.createElement("div", {className: "list"}, 
+            return React.createElement("div", {className: "list"}
 
-                list.offers.map(function(offer){
-
-                    React.createElement("ul", null, 
-                        React.createElement("li", null, React.createElement(OfferBox, {name: "Offers", id: offer.id}))
-                    )
-
-                })
-                
 
 
             )

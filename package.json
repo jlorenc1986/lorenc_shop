@@ -21,6 +21,7 @@
     "dateformat": "^1.0.11",
     "ejs": "^2.3.1",
     "esprima-fb": "^15001.1.0-dev-harmony-fb",
+    "gulp": "^3.9.0",
     "gulp-jscs": "^1.6.0",
     "gulp-jscs-stylish": "^1.1.0",
     "gulp-jshint": "^1.11.0",
