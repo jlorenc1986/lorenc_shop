@@ -20,3 +20,8 @@ Crud application in full Javascript (BE-FE)
 
 1. run npm run test:unit for unit Testing
 
+# Meetrics
+
+
+[![Throughput Graph](https://graphs.waffle.io/jlorenc1986/lorenc_shop/throughput.svg)](https://waffle.io/jlorenc1986/lorenc_shop/metrics)
+
