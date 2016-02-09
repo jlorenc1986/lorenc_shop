@@ -9,14 +9,6 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-//database
-
-var mongo = require('mongo');
-var monk  = require('monk');
-
-//var mongoose = require('mongoose');
-var db    = monk('localhost:27017/lorenc_shop');
-
 // load models
 
 
@@ -28,11 +20,6 @@ users = require('./routes/users');
 products = require('./routes/products');
 offers = require('./routes/offers');
 
-// Make our db accessible to our router
-app.use(function(req,res,next){
-    req.db = db;
-    next();
-});
 
 app.use('/', routes);
 app.use('/users', users);
