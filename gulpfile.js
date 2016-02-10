@@ -3,7 +3,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var watch = require('gulp-watch');
 var react = require('gulp-react');
 var nodemon = require('gulp-nodemon');
-var less    = require('gulp-less');
+var sass    = require('gulp-sass');
 var path    = require('path');
 
 gulp.task('react', function () {
@@ -11,9 +11,9 @@ gulp.task('react', function () {
 });
 
 
-gulp.task('less', function(){
-    return gulp.src('./styles/**/*.less')
-        .pipe(less({
+gulp.task('sass', function(){
+    return gulp.src('./styles/**/*.scss')
+        .pipe(sass({
 
         }))
         .pipe(gulp.dest('./public/stylesheets/'));
@@ -35,5 +35,3 @@ gulp.task('develop', function(){
 });
 
 gulp.task('default', ['develop','react', 'watch']);
-
-
