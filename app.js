@@ -4,7 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var firebase = require('firebase');
 
+const FIREBASE_ENDPOINT = "https://incandescent-fire-4567.firebaseio.com/";
 
 
 var app = express();
