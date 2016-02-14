@@ -1,0 +1,13 @@
+.ls-navbar{
+
+  list-style: none;
+
+  &__item{
+
+    background-color: red;
+
+    &--login{
+      color: red;
+    }
+  }
+}

@@ -96,5 +96,9 @@ input[type=checkbox] {
   /* For mobile, it's typically better to position checkbox on top of clickable
       area and turn opacity to 0 instead. */ }
 
-.ls-navbar__item {
-  background-color: red; }
+.ls-navbar {
+  list-style: none; }
+  .ls-navbar__item {
+    background-color: red; }
+    .ls-navbar__item--login {
+      color: red; }

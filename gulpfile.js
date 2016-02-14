@@ -22,6 +22,7 @@ gulp.task('sass', function(){
 
 gulp.task('watch', function(){
     gulp.watch('./ui_components/**/*.jsx',['react']);
+    gulp.watch('./styles/**/*.scss',['sass']);
 });
 
 
