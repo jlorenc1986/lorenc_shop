@@ -18,7 +18,7 @@ gulp.task('lint', function(){
 
 });
 
-gulp.task('sass-lint', function(){
+gulp.task('sass', function(){
     return gulp.src('./styles/**/*.scss')
         .pipe(sass({
 
@@ -46,4 +46,4 @@ gulp.task('develop', function(){
         })
 });
 
-gulp.task('default', ['develop','react', 'watch', 'sass-lint']);
+gulp.task('default', ['develop','react', 'watch']);
