@@ -5,13 +5,20 @@ var react = require('gulp-react');
 var nodemon = require('gulp-nodemon');
 var sass    = require('gulp-sass');
 var path    = require('path');
+var sassLint = require('gulp-scss-lint');
 
 gulp.task('react', function () {
     return gulp.src('./ui_components/*.jsx').pipe(react()).pipe(gulp.dest('./public/javascripts/components/'));
 });
 
+gulp.task('lint', function(){
 
-gulp.task('sass', function(){
+  return gulp.src('/styles/**/*.scss')
+    .pipe(sassLint());
+
+});
+
+gulp.task('sass-lint', function(){
     return gulp.src('./styles/**/*.scss')
         .pipe(sass({
 
@@ -27,12 +34,16 @@ gulp.task('watch', function(){
 
 
 gulp.task('develop', function(){
-    nodemon({ script: 'bin/www'
-        , ext: 'html js jsx'
+    nodemon({
+      script: 'app.js',
+      ext: 'html js jsx',
+      env: { "NODE_ENV": "development"  },
+      // tasks: ['sass-lint']
+
     })
         .on('restart', function () {
             console.log('restarted!')
         })
 });
 
-gulp.task('default', ['develop','react', 'watch']);
+gulp.task('default', ['develop','react', 'watch', 'sass-lint']);
