@@ -36,7 +36,7 @@ gulp.task('watch', function(){
 gulp.task('develop', function(){
     nodemon({
       script: 'app.js',
-      ext: 'html js jsx',
+      ext: 'html js jsx ejs',
       env: { "NODE_ENV": "development"  },
       // tasks: ['sass-lint']
 
