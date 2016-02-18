@@ -11,7 +11,7 @@ const FIREBASE_ENDPOINT = "https://incandescent-fire-4567.firebaseio.com/";
 
 var app = express();
 
-// load modelsŒ
+// load models
 
 
 // routes

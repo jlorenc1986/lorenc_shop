@@ -5,7 +5,7 @@ var express = require('express');
 
 
 // set the request to the development enviroment
-request = request('http://localhost:3000');
+request = request('http://localhost:9000');
 
 describe('GET /users', function () {
 
@@ -61,6 +61,3 @@ describe('GET /offers/list, most updated offers', function () {
     });
 
 });
-
-
-
