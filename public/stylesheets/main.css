@@ -97,7 +97,8 @@ input[type=checkbox] {
       area and turn opacity to 0 instead. */ }
 
 .ls-navbar {
-  list-style: none; }
+  list-style: none;
+  text-transform: uppercase; }
   .ls-navbar__item {
     background-color: red; }
     .ls-navbar__item--login {
