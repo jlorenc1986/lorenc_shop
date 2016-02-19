@@ -97,17 +97,23 @@ input[type=checkbox] {
       area and turn opacity to 0 instead. */ }
 
 .ls-navbar {
-  list-style: none;
   text-transform: uppercase;
   width: 100%; }
   .ls-navbar li {
     display: inline-block;
     vertical-align: middle; }
+  @media screen and (max-width: 400px) {
+    .ls-navbar li {
+      display: block; } }
   .ls-navbar__item {
     border: 1px solid #318817;
     border-radius: 20px;
     padding: 20px;
-    margin: 10px; }
+    margin: 10px;
+    text-align: center; }
+    @media screen and (max-width: 400px) {
+      .ls-navbar__item {
+        padding: 50px; } }
     .ls-navbar__item:hover {
       background-color: #2ded85;
       color: white;

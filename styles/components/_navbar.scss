@@ -3,7 +3,6 @@ $ls-green-secondary: #2ded85;
 $ls-white-primary: #e4d7d7;
 .ls-navbar{
 
-  list-style: none;
 	text-transform: uppercase;
 	width: 100%;
 
@@ -12,11 +11,26 @@ $ls-white-primary: #e4d7d7;
 		vertical-align: middle;
 	}
 
+	@media screen and (max-width:400px) {
+
+		li {
+			display: block;
+		}
+
+	}
+
    &__item{
 	border: 1px solid $ls-green-primary;
 	border-radius: 20px;
 	padding: 20px;
 	margin: 10px;
+	text-align: center;
+
+	@media screen and (max-width:400px) {
+
+		padding: 50px;
+}
+
 
 	&:hover{
 		background-color: $ls-green-secondary;
