@@ -21,12 +21,14 @@ routes = require('./routes/index');
 users = require('./routes/users');
 products = require('./routes/products');
 offers = require('./routes/offers');
+auth = require('./routes/auth');
 
 
 app.use('/', routes);
 app.use('/users', users);
 app.use('/products', products);
 app.use('/offers', offers);
+app.use('/auth', auth);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
