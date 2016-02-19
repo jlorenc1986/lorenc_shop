@@ -98,8 +98,23 @@ input[type=checkbox] {
 
 .ls-navbar {
   list-style: none;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  width: 100%; }
+  .ls-navbar li {
+    display: inline-block;
+    vertical-align: middle; }
   .ls-navbar__item {
-    background-color: red; }
-    .ls-navbar__item--login {
-      color: red; }
+    border: 1px solid #318817;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px; }
+    .ls-navbar__item:hover {
+      background-color: #2ded85;
+      color: white;
+      border: 1px solid #e4d7d7; }
+    .ls-navbar__item--signin {
+      color: green; }
+    .ls-navbar__item--home {
+      color: blue; }
+    .ls-navbar__item--about {
+      color: blue; }
