@@ -186,11 +186,11 @@ h5 {
 
 a {
   transition: color 0.2s ease;
-  color: #d55b16; }
+  color: #838383; }
 
 a:hover {
   text-decoration: none;
-  color: #ba3a23; }
+  color: #4f4b4b; }
 
 .ls-button {
   display: inline-block;
@@ -198,9 +198,9 @@ a:hover {
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
-  background-color: #31c965; }
+  background-color: #bcece2; }
   .ls-button:hover {
-    background-color: #228b46; }
+    background-color: rgba(151, 193, 184, 0.99); }
 
 .ls-navbar {
   text-transform: uppercase;
