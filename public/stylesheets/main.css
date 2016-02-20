@@ -209,7 +209,7 @@ a:hover {
   vertical-align: middle;
   border-collapse: separate;
   border-spacing: 10px 0px;
-  background-color: #41717e; }
+  background-color: #406f7c; }
   .ls-navbar li {
     display: table-cell;
     vertical-align: middle; }
@@ -227,3 +227,13 @@ a:hover {
       text-align: left; }
     .ls-navbar__item--about {
       color: blue; }
+
+.ls-footer {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  color: #e4d7d7;
+  background-color: #406f7c;
+  text-align: center;
+  padding: 10px; }

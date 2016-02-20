@@ -1,6 +1,7 @@
 $ls-green-primary: #318817;
 $ls-green-secondary: #2ded85;
 $ls-white-primary: #e4d7d7;
+$ls-navbar-color: #406f7c;
 .ls-navbar{
 
 	text-transform: uppercase;
@@ -9,7 +10,7 @@ $ls-white-primary: #e4d7d7;
 	vertical-align: middle;
 	border-collapse: separate;
 	border-spacing: 10px 0px;
-	background-color: #41717e;
+	background-color: $ls-navbar-color;
 
 	li {
 
