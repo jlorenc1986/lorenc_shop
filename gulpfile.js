@@ -37,9 +37,7 @@ gulp.task('develop', function(){
     nodemon({
       script: 'app.js',
       ext: 'html js jsx ejs',
-      env: { "NODE_ENV": "development"  },
-      // tasks: ['sass-lint']
-
+      env: { "NODE_ENV": "development"  }
     })
         .on('restart', function () {
             console.log('restarted!')
