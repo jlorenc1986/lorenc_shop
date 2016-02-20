@@ -4,7 +4,7 @@ var router = express.Router();
 /* login. */
 router.get('/', function(req, res, next) {
 
-	res.render('index', { title: 'login', isLogin: true });
+	res.render('login/', { title: 'login', isLogin: true });
 
 });
 
