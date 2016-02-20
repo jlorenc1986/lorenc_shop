@@ -6,6 +6,11 @@ $base__font-size: 15px !important;
 
 $base__line: 20 !default;
 
+$ls-green-primary: #318817;
+$ls-green-secondary: #2ded85;
+$ls-white-primary: #e4d7d7;
+$ls-navbar-color: #406f7c;
+
 @function calc-em($target, $context: $base__font-size) {
     @return ($target / $context) * 1em;
 }
