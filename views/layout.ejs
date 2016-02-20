@@ -11,22 +11,28 @@
 </head>
 <body>
 <header>
-  <nav >
+  <nav>
+
     <ul class="ls-navbar">
-      <li class="ls-navbar__item ls-navbar__item--home"> <a class="ls-button ls-button--primary"  href="">home</a></li>
+      <li class="ls-navbar__item ls-navbar__item--home"> <a class="ls-button ls-button--primary"  href="/">home</a></li>
       <li class="ls-navbar__item"></li>
       <li class="ls-navbar__item ls-navbar__item--signin">
-				 <a class="ls-button ls-button--primary" href="">signin </a>
+
+					<% if( title!=='login' ) { %>
+				 <a class="ls-button ls-button--primary" href="/login">login </a>
+				 <% } %>
+
+				<% if( typeof user !== 'undefined' ) { %>
 				<a class="ls-button ls-button--primary"  href="">SignOut</a>
+			 <% } %>
+
 			</li>
     </ul>
   </nav>
 </header>
     <div class="" id="viewContainer"></div>
 
-    <script src="../../javascripts/components/Offer.js" type="text/javascript"></script>
-    <script src="../../javascripts/components/OfferBox.js" type="text/javascript"></script>
-    <script src="../../javascripts/components/listOfBoxes.js" type="text/javascript"></script>
+    <script src="../../javascripts/components/Login.js" type="text/javascript"></script>
 
 </div>
 </body>
