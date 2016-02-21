@@ -4,13 +4,9 @@ var router = express.Router();
 
 /* auth */
 router.post('/', function(req, res) {
-  var token = jwt.sign({}, app.get('superSecret'), {
-		expiresInMinutes: 1440
-	});
-	console.log('post');
 
-	res.render('auth', { title: 'logged in', user: {"name" : "lorenc"}, token: token});
-
+  var token = jwt.sign({ foo: 'lsToken'}, 'fkdlfkdslfk');
+	res.render('platform/',{ client_token: token});
 });
 
 

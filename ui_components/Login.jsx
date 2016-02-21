@@ -23,7 +23,7 @@ var Login = React.createClass({
 
 						<div className="ls-form" id="loginContainer">
                 <ul>
-							<form method="post" action="auth">
+							<form method="post" action="/auth">
 
               <li>
 								<input type="text" name="username" id="username"/>
