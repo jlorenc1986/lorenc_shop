@@ -19,17 +19,25 @@ var Login = React.createClass({displayName: "Login",
 
         render: function() {
 
-            return React.createElement("div", {className: "loginContainer"}, 
+            return React.createElement("div", {className: "login-container"}, 
 
-						React.createElement("div", {class: "", id: "loginContainer"}, 
+						React.createElement("div", {class: "ls-form", id: "loginContainer"}, 
+                React.createElement("ul", null, 
 							React.createElement("form", {action: ""}, 
+
+              React.createElement("li", null, 
 								React.createElement("input", {type: "text", name: "username", id: "username"}), 
-								React.createElement("label", {for: "username"}, " username"), 
-								React.createElement("input", {type: "text", name: "password", id: "password"}), 
-								React.createElement("label", {for: "password"}, " password"), 
-								React.createElement("button", null, " Login"
+								React.createElement("label", {for: "username"}, " username")
+              ), 
+
+              React.createElement("li", null, 
+              	React.createElement("input", {type: "password", name: "password", id: "password"}), 
+								React.createElement("label", {for: "password"}, " password")
+              ), 
+             	  React.createElement("button", null, " Login"
 								)
 							)
+            )
 						)
 
 

@@ -19,17 +19,25 @@ var Login = React.createClass({
 
         render: function() {
 
-            return <div className="loginContainer">
+            return <div className="login-container">
 
-						<div class="" id="loginContainer">
+						<div class="ls-form" id="loginContainer">
+                <ul>
 							<form action="">
+
+              <li>
 								<input type="text" name="username" id="username"/>
 								<label for="username"> username</label>
-								<input type="text" name="password" id="password"/>
+              </li>
+
+              <li>
+              	<input type="password" name="password" id="password"/>
 								<label for="password"> password</label>
-								<button> Login
+              </li>
+             	  <button> Login
 								</button>
 							</form>
+            </ul>
 						</div>
 
 

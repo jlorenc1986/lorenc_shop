@@ -6,6 +6,8 @@ var nodemon = require('gulp-nodemon');
 var sass    = require('gulp-sass');
 var path    = require('path');
 var sassLint = require('gulp-scss-lint');
+var livereload = require('gulp-livereload');
+var notify = require('gulp-notify');
 
 gulp.task('react', function () {
     return gulp.src('./ui_components/*.jsx').pipe(react()).pipe(gulp.dest('./public/javascripts/components/'));
@@ -36,12 +38,17 @@ gulp.task('watch', function(){
 gulp.task('develop', function(){
     nodemon({
       script: 'app.js',
-      ext: 'html js jsx ejs',
+      ext: 'html js jsx ejs scss',
       env: { "NODE_ENV": "development"  }
     })
         .on('restart', function () {
-            console.log('restarted!')
-        })
+
+              gulp.src('app.js')
+			           .pipe(livereload())
+			           .pipe(notify('Reloading page, please wait...'));
+
+
+        });
 });
 
 gulp.task('default', ['develop','react', 'watch']);
