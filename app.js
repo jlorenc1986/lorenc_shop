@@ -6,21 +6,16 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var jwt = require('jsonwebtoken');
 
-var app = express();
-
-// load models
-
-
 // routes
-var routes, users, products, offers, login, auth;
+var app, routes, users, products, offers, login, auth;
 
+app = express();
 routes = require('./routes/index');
 users = require('./routes/users');
 products = require('./routes/products');
 offers = require('./routes/offers');
 auth = require('./routes/auth');
 login = require('./routes/login');
-
 
 app.use('/', routes);
 app.use('/users', users);

@@ -4,9 +4,10 @@ var router = express.Router();
 
 /* auth */
 router.post('/', function(req, res) {
+  var token = jwt.sign({ tok: 'lsToken'}, 'fkdlfkdslfk');
 
-  var token = jwt.sign({ foo: 'lsToken'}, 'fkdlfkdslfk');
-	res.render('platform/',{ client_token: token});
+	res.render('platform/',{ title: "platform",client_token: token, user:{}});
+
 });
 
 
