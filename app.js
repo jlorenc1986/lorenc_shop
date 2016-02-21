@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var jwt = require('jsonwebtoken');
 
 var app = express();
 
@@ -11,7 +12,7 @@ var app = express();
 
 
 // routes
-var routes, users, products, offers, login;
+var routes, users, products, offers, login, auth;
 
 routes = require('./routes/index');
 users = require('./routes/users');

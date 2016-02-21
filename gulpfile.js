@@ -39,7 +39,7 @@ gulp.task('develop', function(){
     nodemon({
       script: 'app.js',
       ext: 'html js jsx ejs scss',
-      env: { "NODE_ENV": "development"  }
+      env: { "NODE_ENV": "development" ,"DEBUG":"express" }
     })
         .on('restart', function () {
 

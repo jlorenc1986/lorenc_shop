@@ -1,10 +1,15 @@
 var express = require('express');
+var jwt = require('jsonwebtoken');
 var router = express.Router();
 
-/* login. */
-router.get('/', function(req, res, next) {
+/* auth */
+router.post('/', function(req, res) {
+  var token = jwt.sign({}, app.get('superSecret'), {
+		expiresInMinutes: 1440
+	});
+	console.log('post');
 
-	res.render('logged', { title: 'logged in', user: {"name" : "lorenc"}});
+	res.render('auth', { title: 'logged in', user: {"name" : "lorenc"}, token: token});
 
 });
 

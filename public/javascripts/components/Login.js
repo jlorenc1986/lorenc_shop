@@ -21,9 +21,9 @@ var Login = React.createClass({displayName: "Login",
 
             return React.createElement("div", {className: "login-container"}, 
 
-						React.createElement("div", {class: "ls-form", id: "loginContainer"}, 
+						React.createElement("div", {className: "ls-form", id: "loginContainer"}, 
                 React.createElement("ul", null, 
-							React.createElement("form", {action: ""}, 
+							React.createElement("form", {method: "post", action: "auth"}, 
 
               React.createElement("li", null, 
 								React.createElement("input", {type: "text", name: "username", id: "username"}), 
