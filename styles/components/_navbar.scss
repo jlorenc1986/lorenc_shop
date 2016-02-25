@@ -8,9 +8,10 @@
 	background-color: $ls-navbar-color;
 
 	li {
-
 		display: table-cell;
 		vertical-align: middle;
+		position: relative;
+		width: 33%;
 	}
 
 	@media screen and (max-width:400px) {

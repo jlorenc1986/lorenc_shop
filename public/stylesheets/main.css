@@ -215,7 +215,9 @@ a:hover {
   background-color: #406f7c; }
   .ls-navbar li {
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;
+    position: relative;
+    width: 33%; }
   @media screen and (max-width: 400px) {
     .ls-navbar li {
       display: block; } }
