@@ -1,11 +1,11 @@
 {
   "name": "lorenc_shop",
-  "version": "0.0.0",
-  "authot": "Lorenc Estrefi jlorenc1986",
+  "version": "0.1.22",
+  "authot": "Lorenc Estrefi (jlorenc1986)",
   "private": true,
   "scripts": {
     "test:unit": "mocha test/*.js",
-		"start": "node app.js NODE_ENV=production"
+		"start": "node app.js"
   },
   "dependencies": {
     "body-parser": "^1.12.4",
