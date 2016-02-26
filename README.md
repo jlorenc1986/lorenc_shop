@@ -8,12 +8,12 @@ Crud application in full Javascript (BE-FE)
 
 1. Clone repository
 2. run npm install
-4. run node app.js to start the application
+4. run gulp to start the application
 
 
 ## Development
 
-1. run gulp develop
+1. run gulp 
 
 
 ## Testing
@@ -24,4 +24,3 @@ Crud application in full Javascript (BE-FE)
 
 
 [![Throughput Graph](https://graphs.waffle.io/jlorenc1986/lorenc_shop/throughput.svg)](https://waffle.io/jlorenc1986/lorenc_shop/metrics)
-
