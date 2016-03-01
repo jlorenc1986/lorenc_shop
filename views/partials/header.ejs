@@ -9,23 +9,3 @@
     <script type="text/javascript" src="../../javascripts/moment.js"></script>
 </head>
 <body>
-<header>
-  <nav>
-
-    <ul class="ls-navbar">
-      <li class="ls-navbar__item ls-navbar__item--home"> <a class="ls-button ls-button--primary"  href="/">home</a></li>
-      <li class="ls-navbar__item"></li>
-      <li class="ls-navbar__item ls-navbar__item--signin">
-
-					<% if( title!=='login' ) { %>
-				 <a class="ls-button ls-button--primary" href="/login">login </a>
-				 <% } %>
-
-				<% if( typeof user !== 'undefined' ) { %>
-				<a class="ls-button ls-button--primary"  href="">SignOut</a>
-			 <% } %>
-
-			</li>
-    </ul>
-  </nav>
-</header>
