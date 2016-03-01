@@ -1,4 +1,4 @@
-FROM readytalk/nodejs
+FROM nodesource/node:4.0
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
@@ -10,5 +10,4 @@ COPY . /usr/src/app
 
 EXPOSE 9000
 
-CMD [ ]
- ENTRYPOINT ["/nodejs/bin/npm", "start"]
+CMD [ "node", "app.js" ]
