@@ -10,6 +10,11 @@ var Navbar = React.createClass({
 
   },
 
+	getInitialState:function(){
+
+		return { isLogged: false}
+	},
+
   componentWillMount: function() {
 
   },
@@ -18,8 +23,18 @@ var Navbar = React.createClass({
 
   },
 
- 
+
         render: function() {
+
+					var isLogged = this.state.isLogged;
+					var login = null;
+					var SignOut = null;
+					if(isLogged){
+
+						login = 	<a className="ls-button ls-button--primary"  href="">Login</a>;
+					}else{
+						SignOut = <a className="ls-button ls-button--primary"  href="">SignOut</a>;
+					}
 
 
             return <header>
@@ -30,10 +45,10 @@ var Navbar = React.createClass({
                   <li className="ls-navbar__item"></li>
                   <li className="ls-navbar__item ls-navbar__item--signin">
 
-            				 <a className="ls-button ls-button--primary" href="/login">login </a>
 
-            				<a className="ls-button ls-button--primary"  href="">SignOut</a>
+										{login}
 
+            			 {SignOut}
             			</li>
                 </ul>
               </nav>

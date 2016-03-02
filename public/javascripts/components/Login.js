@@ -4,7 +4,9 @@ var Login = React.createClass({displayName: "Login",
 
         getInitialState: function() {
 
-					return {};
+					return {
+						"isloggend" : false
+					};
 
         },
 
@@ -18,6 +20,12 @@ var Login = React.createClass({displayName: "Login",
         },
 
         render: function() {
+
+					var isLogged = false;
+					var login = null;
+					if(isLogged){
+
+					}
 
             return React.createElement("div", {className: "login-container"}, 
 

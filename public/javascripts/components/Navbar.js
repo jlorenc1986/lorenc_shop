@@ -10,16 +10,31 @@ var Navbar = React.createClass({displayName: "Navbar",
 
   },
 
+	getInitialState:function(){
+
+		return { isLogged: false}
+	},
+
   componentWillMount: function() {
 
   },
 
   componentWillUpdate: function(nextProps, nextState) {
-    
+
   },
 
 
         render: function() {
+
+					var isLogged = this.state.isLogged;
+					var login = null;
+					var SignOut = null;
+					if(isLogged){
+
+						login = 	React.createElement("a", {className: "ls-button ls-button--primary", href: ""}, "Login");
+					}else{
+						SignOut = React.createElement("a", {className: "ls-button ls-button--primary", href: ""}, "SignOut");
+					}
 
 
             return React.createElement("header", null, 
@@ -30,10 +45,10 @@ var Navbar = React.createClass({displayName: "Navbar",
                   React.createElement("li", {className: "ls-navbar__item"}), 
                   React.createElement("li", {className: "ls-navbar__item ls-navbar__item--signin"}, 
 
-            				 React.createElement("a", {className: "ls-button ls-button--primary", href: "/login"}, "login "), 
 
-            				React.createElement("a", {className: "ls-button ls-button--primary", href: ""}, "SignOut")
+										login, 
 
+            			 SignOut
             			)
                 )
               )
