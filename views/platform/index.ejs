@@ -3,9 +3,7 @@
 <% include ../partials/header%>
   <body>
     <div id="viewContainer" class="view-container">
-      <div id="navbar" data-conf="<%=user.name%>" >
-
-
+      <div id="navbar" data-conf=<%-JSON.stringify(user)%> >
       </div>
     </div>
 
