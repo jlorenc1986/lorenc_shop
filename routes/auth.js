@@ -6,7 +6,7 @@ var router = express.Router();
 router.post('/', function(req, res) {
   var token = jwt.sign({ tok: 'lsToken'}, 'fkdlfkdslfk');
 
-	res.render('platform/',{ title: "platform",client_token: token, user:{}});
+	res.render('platform/',{ title: "platform",client_token: token, user:{ name: 'lorenc'}});
 
 });
 
