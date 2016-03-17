@@ -192,6 +192,9 @@ a:hover {
   text-decoration: none;
   color: #4f4b4b; }
 
+.view-container {
+  padding: 20px 20px; }
+
 .ls-button {
   display: inline-block;
   vertical-align: middle;
