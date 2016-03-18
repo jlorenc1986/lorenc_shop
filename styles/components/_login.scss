@@ -1,6 +1,8 @@
 .login-container{
-  display: table;
+  display: inline-block;
   vertical-align: middle;
-  margin-right: auto;
-  margin-left: auto;
+  position: relative;
+
+  top: 50%;
+  left: 50%;
 }
