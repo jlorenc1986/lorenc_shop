@@ -42,7 +42,7 @@ var Login = React.createClass({displayName: "Login",
               	React.createElement("input", {type: "password", name: "password", id: "password"}), 
 								React.createElement("label", {for: "password"}, " password")
               ), 
-             	  React.createElement("button", null, " Login"
+								React.createElement("button", {className: "button"}, " Login"
 								)
 							)
             )

@@ -192,6 +192,16 @@ input[type="password"] {
   padding: 10px;
 }
 
+.button {
+  padding: 10px;
+  border: 1px solid;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: green;
+}
+
 input[type="password"]:focus {
   outline: none;
   border-left: 1px solid grey;
