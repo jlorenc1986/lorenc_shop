@@ -105,6 +105,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
+    content: '';
     content: none;
 }
 
@@ -152,6 +153,7 @@ input[type="text"] {
   width: 100%;
   font-family: sans-serif;
   font-size: 18px;
+    appearance: none;
   box-shadow: none;
   border-radius: 5px;
   border: none;
@@ -167,6 +169,7 @@ input[type="password"] {
   width: 100%;
   font-family: sans-serif;
   font-size: 18px;
+    appearance: none;
   box-shadow: none;
   border-radius: 5px;
   border: none;
@@ -238,7 +241,6 @@ a:hover {
   vertical-align: middle;
   border-radius: 10px;
   padding: 10px;
-  margin: 10px;
   background-color: #bcece2; }
   .ls-button:hover {
     background-color: rgba(151, 193, 184, 0.99); }
@@ -249,7 +251,7 @@ a:hover {
   display: table;
   vertical-align: middle;
   border-collapse: separate;
-    border-spacing: 10px 0;
+    border-spacing: 10px 0px;
   background-color: #406f7c; }
   .ls-navbar li {
     display: table-cell;

@@ -42,7 +42,7 @@ var Login = React.createClass({
               	<input type="password" name="password" id="password"/>
 								<label for="password"> password</label>
               </li>
-								<button className="button"> Login
+								<button className="button ls-button"> Login
 								</button>
 							</form>
             </ul>
