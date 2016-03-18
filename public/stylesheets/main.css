@@ -105,9 +105,8 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
-}
+  content: '';
+  content: none; }
 
 a {
   margin: 0;
@@ -153,7 +152,7 @@ input[type="text"] {
   width: 100%;
   font-family: sans-serif;
   font-size: 18px;
-    appearance: none;
+  appearance: none;
   box-shadow: none;
   border-radius: 5px;
   border: none;
@@ -169,7 +168,7 @@ input[type="password"] {
   width: 100%;
   font-family: sans-serif;
   font-size: 18px;
-    appearance: none;
+  appearance: none;
   box-shadow: none;
   border-radius: 5px;
   border: none;
@@ -251,7 +250,7 @@ a:hover {
   display: table;
   vertical-align: middle;
   border-collapse: separate;
-    border-spacing: 10px 0px;
+  border-spacing: 10px 0px;
   background-color: #406f7c; }
   .ls-navbar li {
     display: table-cell;
@@ -284,9 +283,8 @@ a:hover {
   padding: 10px; }
 
 .login-container {
-    display: inline-block;
+  display: inline-block;
   vertical-align: middle;
-    position: relative;
-    top: 50%;
-    left: 50%;
-}
+  position: relative;
+  top: 50%;
+  left: 50%; }
