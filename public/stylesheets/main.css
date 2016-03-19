@@ -244,6 +244,20 @@ a:hover {
   .ls-button:hover {
     background-color: rgba(151, 193, 184, 0.99); }
 
+.ls-form {
+  display: table;
+  vertical-align: middle;
+  width: 100%; }
+  .ls-form input {
+    width: 100%; }
+  .ls-form textarea {
+    width: 100%; }
+  .ls-form__element {
+    display: table-cell;
+    vertical-align: middle; }
+  .ls-form--error {
+    border: 1px solid red; }
+
 .ls-navbar {
   text-transform: uppercase;
   width: 100%;
