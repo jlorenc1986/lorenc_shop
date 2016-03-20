@@ -8,8 +8,9 @@ var bodyParser = require('body-parser');
 router.post('/', function(req, res) {
   var token = jwt.sign({ tok: 'lsToken'}, 'fkdlfkdslfk');
   var username = req.query['username'];
+    console.log(req.body);
 
-	res.render('platform/',{ title: "platform",client_token: token, user:{name: username}});
+    res.render('platform/', {title: "platform", client_token: token, user: {"username": req.body.username}});
 
 });
 

@@ -270,6 +270,8 @@ a:hover {
   vertical-align: middle;
   border-collapse: separate;
   border-spacing: 10px 0px;
+
+    padding: 20px;
   background-color: #406f7c; }
   .ls-navbar li {
     display: table-cell;
