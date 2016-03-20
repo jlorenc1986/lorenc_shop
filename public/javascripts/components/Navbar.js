@@ -4,15 +4,32 @@ var Navbar = React.createClass({displayName: "Navbar",
 
   componentDidMount: function() {
     console.log("navbar did mount" );
+
   },
 
   componentWillReceiveProps: function(nextProps) {
 
+      alert(nextProps);
   },
 
 	getInitialState:function(){
 
-		return { isLogged: false}
+        if (this.props.user.length > 0) {
+
+            return {
+                isLogged: true,
+                user: JSON.parse(this.props.user)
+            }
+        } else {
+
+            return {
+                isLogged: false,
+                user: null
+            }
+        }
+
+
+
 	},
 
   componentWillMount: function() {
@@ -27,13 +44,18 @@ var Navbar = React.createClass({displayName: "Navbar",
         render: function() {
 
 					var isLogged = this.state.isLogged;
+
 					var login = null;
 					var SignOut = null;
+            var UserInfo = null;
 					if(isLogged){
 
-						login = 	React.createElement("a", {className: "ls-button ls-button--primary", href: ""}, "Login");
+
+                        SignOut = React.createElement("a", {className: "ls-button ls-button--primary", href: ""}, " SignOut");
+                        UserInfo = React.createElement("span", {className: "user-info--rounded"}, " ", this.state.user.username, " ");
+
 					}else{
-						SignOut = React.createElement("a", {className: "ls-button ls-button--primary", href: ""}, "SignOut");
+                        login = React.createElement("a", {className: "ls-button ls-button--primary", href: ""}, "Login");
 					}
 
 
@@ -46,8 +68,8 @@ var Navbar = React.createClass({displayName: "Navbar",
                   React.createElement("li", {className: "ls-navbar__item ls-navbar__item--signin"}, 
 
 
-										login, 
-
+                      login, 
+                      UserInfo, 
             			 SignOut
             			)
                 )
@@ -58,4 +80,4 @@ var Navbar = React.createClass({displayName: "Navbar",
 
     parent = document.getElementById("navbar");
 
-React.render(React.createElement(Navbar, null), parent);
+React.render(React.createElement(Navbar, {user: parent.getAttribute('user')}), parent);

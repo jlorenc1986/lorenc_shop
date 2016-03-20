@@ -233,12 +233,11 @@ a:hover {
   color: #4f4b4b; }
 
 .view-container {
-    padding: 20px 20px;
-    width: 1250px;
-    height: 900px;
-    max-width: 90%;
-    max-height: 90%;
-}
+  padding: 20px 20px;
+  width: 1250px;
+  height: 900px;
+  max-width: 90%;
+  max-height: 90%; }
 
 .ls-button {
   display: inline-block;
@@ -270,14 +269,19 @@ a:hover {
   vertical-align: middle;
   border-collapse: separate;
   border-spacing: 10px 0px;
-
-    padding: 20px;
-  background-color: #406f7c; }
+  background-color: #406f7c;
+  padding: 20px; }
   .ls-navbar li {
     display: table-cell;
     vertical-align: middle;
     position: relative;
     width: 33%; }
+  .ls-navbar .user-info--rounded {
+    padding: 5px;
+    border-radius: 50px;
+    font-size: 8px; }
+  .ls-navbar .user-info--rounded:hover {
+    background-color: aliceblue; }
   @media screen and (max-width: 400px) {
     .ls-navbar li {
       display: block; } }
@@ -307,5 +311,4 @@ a:hover {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-    padding-left: 30%;
-}
+  padding-left: 30%; }

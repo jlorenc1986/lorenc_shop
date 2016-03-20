@@ -4,15 +4,32 @@ var Navbar = React.createClass({
 
   componentDidMount: function() {
     console.log("navbar did mount" );
+
   },
 
   componentWillReceiveProps: function(nextProps) {
 
+      alert(nextProps);
   },
 
 	getInitialState:function(){
 
-		return { isLogged: false}
+        if (this.props.user.length > 0) {
+
+            return {
+                isLogged: true,
+                user: JSON.parse(this.props.user)
+            }
+        } else {
+
+            return {
+                isLogged: false,
+                user: null
+            }
+        }
+
+
+
 	},
 
   componentWillMount: function() {
@@ -27,13 +44,18 @@ var Navbar = React.createClass({
         render: function() {
 
 					var isLogged = this.state.isLogged;
+
 					var login = null;
 					var SignOut = null;
+            var UserInfo = null;
 					if(isLogged){
 
-						login = 	<a className="ls-button ls-button--primary"  href="">Login</a>;
+
+                        SignOut = <a className="ls-button ls-button--primary" href=""> SignOut</a>;
+                        UserInfo = <span className="user-info--rounded"> {this.state.user.username} </span>;
+
 					}else{
-						SignOut = <a className="ls-button ls-button--primary"  href="">SignOut</a>;
+                        login = <a className="ls-button ls-button--primary" href="">Login</a>;
 					}
 
 
@@ -46,8 +68,8 @@ var Navbar = React.createClass({
                   <li className="ls-navbar__item ls-navbar__item--signin">
 
 
-										{login}
-
+                      {login}
+                      {UserInfo}
             			 {SignOut}
             			</li>
                 </ul>
@@ -58,4 +80,4 @@ var Navbar = React.createClass({
 
     parent = document.getElementById("navbar");
 
-React.render(<Navbar/>, parent);
+React.render(<Navbar user={parent.getAttribute('user')}/>, parent);

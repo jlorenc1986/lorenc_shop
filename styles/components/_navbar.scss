@@ -6,6 +6,7 @@
 	border-collapse: separate;
 	border-spacing: 10px 0px;
 	background-color: $ls-navbar-color;
+  padding: 20px;
 
 	li {
 		display: table-cell;
@@ -14,6 +15,16 @@
 		width: 33%;
 	}
 
+  .user-info--rounded {
+    padding: 5px;
+    border-radius: 50px;
+    font-size: 8px;
+
+  }
+  .user-info--rounded:hover {
+    background-color: aliceblue;
+
+  }
 	@media screen and (max-width:400px) {
 
 		li {
