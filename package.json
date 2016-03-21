@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test:unit": "mocha test/*.js",
-		"start": "node app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "^1.12.4",
@@ -39,6 +39,7 @@
     "gulp-watch": "^4.2.4",
     "jquery": "^2.1.4",
     "jscs": "^1.13.1",
+    "jsdom": "^8.1.0",
     "marked": "^0.3.3",
     "mocha": "^2.2.5",
     "moment": "^2.10.3",
