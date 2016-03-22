@@ -34,14 +34,16 @@ var Login = React.createClass({
 							<form method="post" action="/auth">
 
               <li>
+				  <label for="username"> username</label>
 								<input type="text" name="username" id="username"/>
-								<label for="username"> username</label>
+
               </li>
 
               <li>
+				  <label for="password"> password</label>
               	<input type="password" name="password" id="password"/>
-								<label for="password"> password</label>
-              </li>
+
+			  </li>
 								<button className="button ls-button"> Login
 								</button>
 							</form>

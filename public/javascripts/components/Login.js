@@ -34,14 +34,16 @@ var Login = React.createClass({displayName: "Login",
 							React.createElement("form", {method: "post", action: "/auth"}, 
 
               React.createElement("li", null, 
-								React.createElement("input", {type: "text", name: "username", id: "username"}), 
-								React.createElement("label", {for: "username"}, " username")
+				  React.createElement("label", {for: "username"}, " username"), 
+								React.createElement("input", {type: "text", name: "username", id: "username"})
+
               ), 
 
               React.createElement("li", null, 
-              	React.createElement("input", {type: "password", name: "password", id: "password"}), 
-								React.createElement("label", {for: "password"}, " password")
-              ), 
+				  React.createElement("label", {for: "password"}, " password"), 
+              	React.createElement("input", {type: "password", name: "password", id: "password"})
+
+			  ), 
 								React.createElement("button", {className: "button ls-button"}, " Login"
 								)
 							)
