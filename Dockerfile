@@ -8,6 +8,7 @@ RUN npm install
 
 COPY . /usr/src/app
 
+
 EXPOSE 9000
 
 CMD [ "node", "app.js" ]
