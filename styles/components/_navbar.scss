@@ -1,0 +1,54 @@
+.ls-navbar{
+	text-transform: uppercase;
+	width: 100%;
+	display: table;
+	vertical-align: middle;
+	border-collapse: separate;
+	border-spacing: 10px 0px;
+	background-color: $ls-navbar-color;
+  padding: 20px;
+
+	li {
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		width: 33%;
+	}
+
+  .user-info--rounded {
+    padding: 5px;
+    border-radius: 50px;
+    font-size: 8px;
+
+  }
+  .user-info--rounded:hover {
+    background-color: aliceblue;
+
+  }
+	@media screen and (max-width:400px) {
+
+		li {
+			display: block;
+		}
+
+	}
+
+  &__item{
+	text-align: center;
+
+	@media screen and (max-width:400px) {
+		padding: 50px;
+}
+
+    &--signin{
+      text-align: right;
+    }
+		&--home {
+			text-align: left;
+		}
+
+		&--about {
+			color: blue;
+		}
+  }
+}

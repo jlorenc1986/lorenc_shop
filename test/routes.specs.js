@@ -3,7 +3,9 @@ var request = require('supertest');
 var assert = require('assert');
 var express = require('express');
 
-request = request('http://localhost:3000');
+
+// set the request to the development enviroment
+request = request('http://localhost:9000');
 
 describe('GET /users', function () {
 
@@ -11,6 +13,15 @@ describe('GET /users', function () {
 
 
         request.get('/users').expect(200, done);
+    });
+});
+
+describe('GET /users/:id', function () {
+
+    it('respond with json', function (done) {
+
+
+        request.get('/users/1').set('Accept', 'application/json').expect('Content-Type', /json/).expect(200, done);
     });
 });
 
@@ -22,4 +33,31 @@ describe('GET /products', function () {
         request.get('/products').set('Accept', 'application/json').expect('Content-Type', /json/).expect(200, done);
     });
 });
+describe('GET /products/:id', function () {
 
+    it('respond with json', function (done) {
+
+
+        request.get('/products/1').set('Accept', 'application/json').expect('Content-Type', /json/).expect(200, done);
+    });
+});
+
+describe('GET /offers', function () {
+
+    it('respond with json', function (done) {
+
+
+        request.get('/offers').set('Accept', 'application/json').expect('Content-Type', /json/).expect(200, done);
+    });
+
+});
+
+describe('GET /offers/list, most updated offers', function () {
+
+    it('respond with json', function (done) {
+
+
+        request.get('/offers/list').set('Accept', 'application/json').expect('Content-Type', /json/).expect(200, done);
+    });
+
+});

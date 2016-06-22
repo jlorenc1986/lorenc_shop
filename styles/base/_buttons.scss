@@ -1,0 +1,15 @@
+$ls-primary-color: #bcece2;
+$ls-primary-color--hover: rgba(#97c1b8, 0.99);
+
+.ls-button{
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: $ls-primary-color;
+
+	&:hover{
+		background-color: $ls-primary-color--hover;
+	}
+
+}
