@@ -66,8 +66,6 @@ var Navbar = React.createClass({
                   <li className="ls-navbar__item ls-navbar__item--home"> <a class="ls-button ls-button--primary"  href="/">home</a></li>
                   <li className="ls-navbar__item"></li>
                   <li className="ls-navbar__item ls-navbar__item--signin">
-
-
                       {login}
                       {UserInfo}
             			 {SignOut}
