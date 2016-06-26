@@ -2,7 +2,7 @@
   "name": "lorenc_shop",
   "version": "0.1.22",
   "authot": "Lorenc Estrefi (jlorenc1986)",
-  "private": true,
+  "private": false,
   "scripts": {
     "test": "node_modules/.bin/mocha test/*.js",
     "start": "node app.js",
