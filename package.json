@@ -4,7 +4,7 @@
   "authot": "Lorenc Estrefi (jlorenc1986)",
   "private": true,
   "scripts": {
-    "test:unit": "mocha test/*.js",
+    "test:unit": "node_modules/.bin/mocha test/*.js",
     "start": "node app.js",
     "dev": "node_modules/.bin/gulp develop"
 
