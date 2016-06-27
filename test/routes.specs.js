@@ -1,21 +1,32 @@
-var assert = require('assert');
+var assert = require('assert'),
+    sinon = require('sinon'),
+    chai = require('chai'),
+    request = require('supertest'),
+    app = require('../app'),
+    expect = chai.expect;
 
-describe('routes SPECS', function () {
+describe('routes SPECS', function() {
 
-    it('dummy test', function () {
 
-        assert.equal(true, true, 'values are equal');
- 
+    beforeEach(function() {
+
+    });
+
+    afterEach(function() {
+
+    });
+
+    it('index route ', function(done) {
+        request(app).get('/').expect(200, done);
+
+
     });
 
 
-    it('dummy test 2 ', function () {
+    it('login route ', function(done) {
 
-        assert.equal(true, true, 'values are equal');
-        
+        request(app).get('/login').expect(200, done);
+
     });
-
 
 });
-
-
