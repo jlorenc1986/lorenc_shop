@@ -1,35 +1,32 @@
-var assert = require('assert');
-var sinon = require('sinon');
-var chai = require('chai');
-var request = require('supertest');
-var app = require('../app');
-var expect = chai.expect;
+var assert = require('assert'),
+    sinon = require('sinon'),
+    chai = require('chai'),
+    request = require('supertest'),
+    app = require('../app'),
+    expect = chai.expect;
 
-describe('routes SPECS', function () {
-	
+describe('routes SPECS', function() {
 
-	beforeEach(function () {
 
-	});
+    beforeEach(function() {
 
-	afterEach(function () {
+    });
 
-	});
+    afterEach(function() {
 
-    it('index route ', function (done) {
-    	request(app).get('/').expect(200, done);
+    });
 
- 
+    it('index route ', function(done) {
+        request(app).get('/').expect(200, done);
+
+
     });
 
 
-    it('login route ', function (done) {
+    it('login route ', function(done) {
 
         request(app).get('/login').expect(200, done);
-        
+
     });
 
-
 });
-
-
