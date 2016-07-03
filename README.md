@@ -1,24 +1,26 @@
 [![Stories in Ready](https://badge.waffle.io/jlorenc1986/lorenc_shop.png?label=ready&title=Ready)](https://waffle.io/jlorenc1986/lorenc_shop)
 # lorenc_shop
 
-CRUD application in full Javascript (BE-FE)
-
+Isomorphic JS application
 
 ## Installation
 
 1. Clone repository
-2. run npm install
-4. run gulp to start the application
+2. > npm install
+
+## Run application
+
+1. > npm run start 
 
 
 ## Development
 
-1. run gulp 
+1. > npm run dev 
 
 
 ## Testing
 
-1. run npm run test:unit for unit Testing
+1. > npm run test
 
 # Meetrics
 
