@@ -19,10 +19,11 @@ gulp.task('lint-sass', function () {
 
 });
 
-gulp.task('lint-sass', function () {
+gulp.task('compile-sass', function () {
 
-  return gulp.src('/js/**/*.scss')
-    .pipe(sass());
+  return gulp.src('./styles/main.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('./public/stylesheets'));
 
 });
 
@@ -34,7 +35,7 @@ gulp.task('lint-js', function () {
 
 gulp.task('watch', function () {
     gulp.watch('./ui_components/**/*.jsx',['react']);
-    gulp.watch('./styles/**/*.scss',['lint-sass']);
+    gulp.watch('./styles/**/*.scss',['compile-sass']);
 });
 
 
