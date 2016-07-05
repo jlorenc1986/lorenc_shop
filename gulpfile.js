@@ -6,6 +6,8 @@ var sassLint = require('gulp-scss-lint');
 var livereload = require('gulp-livereload');
 var notify = require('gulp-notify');
 var eslint = require('gulp-eslint');
+var guppy = require('git-guppy')(gulp);
+var mocha = require('gulp-mocha');
 
 gulp.task('react', function () {
     'use strict';
@@ -38,6 +40,12 @@ gulp.task('watch', function () {
     gulp.watch('./styles/**/*.scss',['compile-sass']);
 });
 
+gulp.task('test', function () {
+   
+    return  gulp.src('./test/*.js', {read: false})
+                .pipe(mocha({reporter: 'nyan'}));
+});
+
 
 gulp.task('develop', function () {
     nodemon({
@@ -54,5 +62,7 @@ gulp.task('develop', function () {
 
         });
 });
+
+gulp.task('pre-commit', ['test']);
 
 gulp.task('default', ['develop', 'react', 'watch']);
