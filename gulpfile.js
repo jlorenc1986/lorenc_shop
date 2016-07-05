@@ -42,7 +42,7 @@ gulp.task('watch', function () {
 
 gulp.task('test', function () {
    
-    return  gulp.src('./test/*.js', {read: false})
+        gulp.src('./test/*.js', {read: false})
                 .pipe(mocha({reporter: 'nyan'}));
 });
 
@@ -58,7 +58,6 @@ gulp.task('develop', function () {
               gulp.src('app.js')
                 .pipe(livereload())
 			    .pipe(notify('Reloading page, please wait...'));
-
 
         });
 });
