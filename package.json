@@ -4,9 +4,10 @@
   "authot": "Lorenc Estrefi (jlorenc1986)",
   "private": false,
   "scripts": {
-    "test": "node_modules/.bin/mocha test/*.js",
+    "test": "NODE_ENV=test node_modules/.bin/mocha test/*.js",
     "start": "node app.js",
-    "dev": "node_modules/.bin/gulp develop"
+    "dev": "node_modules/.bin/gulp develop",
+    "env": "env"
   },
   "dependencies": {
     "body-parser": "^1.12.4",
