@@ -15,7 +15,6 @@ gulp.task('react', function () {
 });
 
 gulp.task('lint-sass', function () {
-
   return gulp.src('/styles/**/*.scss')
     .pipe(sassLint());
 
@@ -41,7 +40,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('test', function () {
-   
+
         gulp.src('./test/*.js', {read: false})
                 .pipe(mocha({reporter: 'nyan'}));
 });
