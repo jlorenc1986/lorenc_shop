@@ -14,7 +14,6 @@ var app, routes, users, products, offers, login, auth;
 app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
@@ -66,7 +65,7 @@ if (app.get('env') === 'development') {
 }
 
 
-app.listen(9000);
+app.listen(3000);
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {

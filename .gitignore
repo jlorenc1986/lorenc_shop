@@ -18,6 +18,8 @@ node_modules/
 *.log
 *.gz
 
+dist
+
 
 # Coveralls
 coverage
