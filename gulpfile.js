@@ -1,13 +1,13 @@
-var gulp = require('gulp');
-var react = require('gulp-react');
-var nodemon = require('gulp-nodemon');
-var sass = require('gulp-sass');
-var sassLint = require('gulp-scss-lint');
-var livereload = require('gulp-livereload');
-var notify = require('gulp-notify');
-var eslint = require('gulp-eslint');
-var guppy = require('git-guppy')(gulp);
-var mocha = require('gulp-mocha');
+var gulp = require('gulp'),
+    react = require('gulp-react'),
+    nodemon = require('gulp-nodemon'),
+    sass = require('gulp-sass'),
+    sassLint = require('gulp-scss-lint'),
+    livereload = require('gulp-livereload'),
+    notify = require('gulp-notify'),
+    eslint = require('gulp-eslint'),
+    guppy = require('git-guppy')(gulp),
+    mocha = require('gulp-mocha');
 
 gulp.task('react', function () {
     'use strict';
