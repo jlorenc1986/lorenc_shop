@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     eslint = require('gulp-eslint'),
     guppy = require('git-guppy')(gulp),
+    rjsopt = require('gulp-requirejs-optimizer'),
     mocha = require('gulp-mocha');
 
 gulp.task('react', function () {
@@ -19,6 +20,13 @@ gulp.task('lint-sass', function () {
     .pipe(sassLint());
 
 });
+
+gulp.task('build-dev', function () {
+  return true;
+
+});
+
+
 
 gulp.task('compile-sass', function () {
 

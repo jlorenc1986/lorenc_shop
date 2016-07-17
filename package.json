@@ -39,6 +39,7 @@
     "gulp-nodemon": "^2.0.3",
     "gulp-notify": "^2.2.0",
     "gulp-react": "^3.0.1",
+    "gulp-requirejs-optimizer": "^0.9.8",
     "gulp-sass": "^2.2.0",
     "gulp-scss-lint": "^0.3.9",
     "gulp-sourcemaps": "^1.5.2",
