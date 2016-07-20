@@ -10,12 +10,12 @@ Isomorphic JS application
 
 ## Run application
 
-1. > npm run start 
+1. > npm run start
 
 
 ## Development
 
-1. > npm run dev 
+1. > npm run dev
 
 
 ## Testing
@@ -23,6 +23,11 @@ Isomorphic JS application
 1. > npm run test
 
 # Meetrics
+
+# Architecture
+
+* SPA builded with : RequireJS , Backbone, Marionette and React
+* Express REST api 
 
 
 [![Throughput Graph](https://graphs.waffle.io/jlorenc1986/lorenc_shop/throughput.svg)](https://waffle.io/jlorenc1986/lorenc_shop/metrics)
