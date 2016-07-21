@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     react = require('gulp-react'),
+    shell = require('gulp-shell'),
     nodemon = require('gulp-nodemon'),
     sass = require('gulp-sass'),
     sassLint = require('gulp-scss-lint'),
@@ -8,6 +9,9 @@ var gulp = require('gulp'),
     eslint = require('gulp-eslint'),
     guppy = require('git-guppy')(gulp),
     rjsopt = require('gulp-requirejs-optimizer'),
+    sourcemaps = require('gulp-sourcemaps'),
+    connect = require('gulp-connect'),
+    del = require('del'),
     mocha = require('gulp-mocha');
 
 gulp.task('react', function () {
@@ -21,12 +25,31 @@ gulp.task('lint-sass', function () {
 
 });
 
-gulp.task('build-dev', function () {
-  return true;
+gulp.task('cleanup-pre-build', function () {
+  return del([
+     'public/index.html',
+     'public/main.js'
+    //  'dist/build.txt',
+    //  'dist/application',
+    //  'dist/backbone.js',
+    //  'dist/jquery.js',
+    //  'dist/marionette.js',
+    //  'dist/underscore.js'
 
+   ]);
 });
 
 
+gulp.task('build-dev', ['cleanup-pre-build'],
+
+ shell.task([
+  'rm -rf dist',
+  'node_modules/.bin/r.js -o build/app.build.js',
+   'cp client/index.html public/index.html',
+   'cp dist/main.js public/main.js'
+])
+
+);
 
 gulp.task('compile-sass', function () {
 
@@ -45,28 +68,25 @@ gulp.task('lint-js', function () {
 gulp.task('watch', function () {
     gulp.watch('./ui_components/**/*.jsx',['react']);
     gulp.watch('./styles/**/*.scss',['compile-sass']);
+    gulp.watch('./client/**/*.js',['build-dev']);
+    // gulp.watch('./client/apps/**/*.js',['build-dev']);
+    gulp.watch('./client/apps/**/*.html',['build-dev']);
+
 });
 
 gulp.task('test', function () {
 
-        gulp.src('./test/*.js', {read: false})
-                .pipe(mocha({reporter: 'nyan'}));
+        gulp.src('./test/*.js', { read: false })
+                .pipe(mocha({ reporter: 'nyan' }));
 });
 
 
 gulp.task('develop', function () {
-    nodemon({
-      script: 'app.js',
-      ext: 'html js jsx ejs scss',
-      env: { "NODE_ENV": "development" ,"DEBUG":"express" }
-    })
-        .on('restart', function () {
-
-              gulp.src('app.js')
-                .pipe(livereload())
-			    .pipe(notify('Reloading page, please wait...'));
-
-        });
+  connect.server({
+    livereload:true,
+    port: 3000,
+    root: ['public']
+  })
 });
 
 gulp.task('pre-commit', function(files){
