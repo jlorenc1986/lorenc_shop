@@ -444,7 +444,7 @@ define('text',['module'], function (module) {
 });
 
 
-define('text!navbarTemplate',[],function () { return 'lorenc_shop , work in progress\n';});
+define('text!navbarTemplate',[],function () { return 'lorenc_shop , work in progress con balotello\n';});
 
 define('navbarView',['require','exports','module','jquery','underscore','backbone','text!navbarTemplate','marionette'],function (require, exports, module){
 
@@ -563,7 +563,6 @@ require.config({
 		"navbarView": "../client/apps/navbar/navbarView",
 		"app": "../client/application/app"
 
-
 	},
 	shim: {
 
@@ -587,7 +586,7 @@ require(['app'], function(App){
 	var app = new App();
 	app.start();
 
-	
+
 });
 
 define("main", function(){});

@@ -13,7 +13,6 @@ require.config({
 		"navbarView": "../client/apps/navbar/navbarView",
 		"app": "../client/application/app"
 
-
 	},
 	shim: {
 
@@ -37,5 +36,5 @@ require(['app'], function(App){
 	var app = new App();
 	app.start();
 
-	
+
 });

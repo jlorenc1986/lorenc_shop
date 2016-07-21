@@ -5,7 +5,6 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sassLint = require('gulp-scss-lint'),
     livereload = require('gulp-livereload'),
-    notify = require('gulp-notify'),
     eslint = require('gulp-eslint'),
     guppy = require('git-guppy')(gulp),
     rjsopt = require('gulp-requirejs-optimizer'),
@@ -29,40 +28,41 @@ gulp.task('cleanup-pre-build', function () {
   return del([
      'public/index.html',
      'public/main.js'
-    //  'dist/build.txt',
-    //  'dist/application',
-    //  'dist/backbone.js',
-    //  'dist/jquery.js',
-    //  'dist/marionette.js',
-    //  'dist/underscore.js'
-
    ]);
 });
 
-
-gulp.task('build-dev', ['cleanup-pre-build'],
-
- shell.task([
-  'rm -rf dist',
-  'node_modules/.bin/r.js -o build/app.build.js',
-   'cp client/index.html public/index.html',
-   'cp dist/main.js public/main.js'
-])
-
+gulp.task('compile-rjs', ['cleanup-pre-build'],
+      shell.task([
+       'rm -rf dist',
+       'node_modules/.bin/r.js -o build/app.build.js',
+        ])
 );
+gulp.task('build-dev', ['compile-rjs'], function () {
+
+      return gulp.src('./client/*.js',{read: false})
+      .pipe(
+       shell([
+          'cp client/index.html public/index.html',
+          'cp dist/main.js public/main.js'
+       ])
+     )
+     .pipe(connect.reload());
+});
 
 gulp.task('compile-sass', function () {
 
   return gulp.src('./styles/main.scss')
     .pipe(sass())
-    .pipe(gulp.dest('./public/stylesheets'));
+    .pipe(gulp.dest('./public/stylesheets'))
+    .pipe(connect.reload());
 
 });
 
 gulp.task('lint-js', function () {
     return gulp.src('./ui_components/**/*.jsx')
         .pipe(react())
-        .pipe(eslint());
+        .pipe(eslint())
+        .pipe(connect.reload());
 });
 
 gulp.task('watch', function () {
@@ -70,7 +70,7 @@ gulp.task('watch', function () {
     gulp.watch('./styles/**/*.scss',['compile-sass']);
     gulp.watch('./client/**/*.js',['build-dev']);
     // gulp.watch('./client/apps/**/*.js',['build-dev']);
-    gulp.watch('./client/apps/**/*.html',['build-dev']);
+    gulp.watch('./client/apps/**/*.html', ['build-dev']);
 
 });
 
@@ -81,11 +81,12 @@ gulp.task('test', function () {
 });
 
 
-gulp.task('develop', function () {
+gulp.task('develop',['build-dev'], function () {
   connect.server({
-    livereload:true,
+    livereload: true,
     port: 3000,
-    root: ['public']
+    root: 'public'
+
   })
 });
 
@@ -93,4 +94,4 @@ gulp.task('pre-commit', function(files){
 return true;
 });
 
-gulp.task('default', ['develop', 'react', 'watch']);
+gulp.task('default', ['develop', 'watch']);
