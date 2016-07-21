@@ -20,6 +20,7 @@ define(function (require, exports, module){
 
 		render: function (){
 			var that = this;
+			
 			console.log('render navbarView function');
 			 that.$el.html(that.template);
 

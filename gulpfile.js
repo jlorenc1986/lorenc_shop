@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
     react = require('gulp-react'),
     shell = require('gulp-shell'),
-    nodemon = require('gulp-nodemon'),
     sass = require('gulp-sass'),
     sassLint = require('gulp-scss-lint'),
     livereload = require('gulp-livereload'),
