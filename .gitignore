@@ -31,3 +31,6 @@ benchmarks/graphs
 
 # builds
 dist
+
+# public folder
+public
