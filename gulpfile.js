@@ -22,15 +22,22 @@ gulp.task('lint-sass', function () {
 
 gulp.task('cleanup-pre-build', function () {
   return del([
-     'public/index.html',
-     'public/main.js'
+     'public'
    ]);
 });
+
+gulp.task('clean', shell.task([
+   'rm -rf public'])
+);
 
 gulp.task('compile-rjs', ['cleanup-pre-build'],
       shell.task([
        'rm -rf dist',
        'node_modules/.bin/r.js -o build/app.build.js',
+        'mkdir public',
+        'mkdir public/vendor',
+        'cp node_modules/requirejs/require.js public/vendor/requirejs.js'
+
         ])
 );
 gulp.task('build-dev', ['compile-rjs'], function () {

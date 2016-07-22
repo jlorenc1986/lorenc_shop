@@ -9,6 +9,7 @@
     "dev": "NODE_ENV=development node_modules/.bin/gulp default",
     "env": "env",
     "build": "node_modules/.bin/r.js --help",
+    "clean": "node_modules/.bin/gulp clean",
     "dev-watch": "NODE_ENV=development node_modules/.bin/gulp watch",
     "build-dev": "NODE_ENV=development node_modules/.bin/gulp build-dev"
   },
