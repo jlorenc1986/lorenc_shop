@@ -17,7 +17,7 @@ describe('routes SPECS', function() {
     });
 
     it('index route ', function(done) {
-        request(app).get('/').expect(200, done);
+        request(app).get('/').expect('lorenc_shop API V1.0', done);
 
 
     });
