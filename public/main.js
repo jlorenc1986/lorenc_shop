@@ -444,7 +444,7 @@ define('text',['module'], function (module) {
 });
 
 
-define('text!navbarTemplate',[],function () { return 'lorenc_shop , work in progress :) \n';});
+define('text!navbarTemplate',[],function () { return 'lorenc_shop , work in progress , sorry :) \n';});
 
 define('navbarView',['require','exports','module','jquery','underscore','backbone','text!navbarTemplate','marionette'],function (require, exports, module){
 

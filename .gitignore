@@ -33,4 +33,4 @@ benchmarks/graphs
 dist
 
 # public folder
-public
+public/*
