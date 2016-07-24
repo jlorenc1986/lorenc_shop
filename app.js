@@ -24,9 +24,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 
-// app.use(express.static(path.join(__dirname, 'public')));
-
-
 routes = require('./routes/index');
 users = require('./routes/users');
 products = require('./routes/products');
