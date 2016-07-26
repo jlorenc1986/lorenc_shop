@@ -5,6 +5,7 @@ var $ = require('jquery')
 		_ = require('underscore')
 		Backbone = require('backbone')
 		Marionette = require('marionette')
+		Bootstrap = require('bootstrap')
 		RootView = require('rootView');
 
 var App = Marionette.Application.extend({
@@ -22,7 +23,7 @@ var App = Marionette.Application.extend({
 
 		onStart: function(opts){
 			console.log('app started ', opts);
-			
+
 		}
 
 

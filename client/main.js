@@ -6,6 +6,7 @@ require.config({
 		"jquery": "../node_modules/jquery/dist/jquery.min",
 		"underscore": "../node_modules/underscore/underscore-min",
 		'text': '../node_modules/text/text',
+		'bootstrap': '../node_modules/bootstrap/dist/js/bootstrap.min',
 		"backbone": "../node_modules/backbone/backbone-min",
 		"marionette": "../node_modules/backbone.marionette/lib/backbone.marionette.min",
 		"rootView": "../client/application/rootView",
