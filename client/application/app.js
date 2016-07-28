@@ -5,7 +5,8 @@ var $ = require('jquery')
 		_ = require('underscore')
 		Backbone = require('backbone')
 		Marionette = require('marionette')
-		Bootstrap = require('bootstrap')
+		Bootstrap = require('router')
+		Router = require('rootView')
 		RootView = require('rootView');
 
 var App = Marionette.Application.extend({
