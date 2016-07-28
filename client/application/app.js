@@ -6,7 +6,7 @@ var $ = require('jquery')
 		Backbone = require('backbone')
 		Marionette = require('marionette')
 		Bootstrap = require('router')
-		Router = require('rootView')
+		Router = require('router')
 		RootView = require('rootView');
 
 var App = Marionette.Application.extend({
@@ -15,18 +15,19 @@ var App = Marionette.Application.extend({
 			"start": "onStart"
 		},
 
-		initialize: function(opts){
+		initialize: function (opts) {
 		console.log('init app with ', opts);
+
 
 		},
 
 		rootView: new RootView(),
 
-		onStart: function(opts){
+		onStart: function (opts) {
 			console.log('app started ', opts);
+			this.router = new Router();
 
 		}
-
 
 });
 

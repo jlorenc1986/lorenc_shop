@@ -12,6 +12,7 @@ require.config({
 		"rootView": "../client/application/rootView",
 		"navbarTemplate": "../client/apps/navbar/templates/navbar-template.html",
 		"navbarView": "../client/apps/navbar/navbarView",
+		"RouteController": "../client/application/routeController",
 		"router": "../client/application/router",
 		"app": "../client/application/app"
 

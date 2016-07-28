@@ -5,10 +5,21 @@ define(function(require , exports, module ){
 		$ = require('jquery'),
 		_ = require('underscore'),
 		Backbone = require('backbone'),
+		RouteController = require('RouteController'),
 		Marionette = require('marionette');
 
-	Router = Marionette.Router.extend({
+	Router = Marionette.AppRouter.extend({
 
+    routes: {
+
+      '/' : 'getIndex'
+
+    },
+
+    initialize: function(){
+      console.log('<INIT>ROUTER</INIT>' );
+      this.controller = new RouteController();
+    }
 
 	});
 
