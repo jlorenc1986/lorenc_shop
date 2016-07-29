@@ -21,8 +21,6 @@ var App = Marionette.Application.extend({
 
 		},
 
-		rootView: new RootView(),
-
 		onStart: function (opts) {
 			console.log('app started ', opts);
 			this.router = new Router();
