@@ -25,6 +25,7 @@ var App = Marionette.Application.extend({
 			console.log('app started ', opts);
 			 this.router = new Router();
 			 this.RootView = new RootView();
+			 Backbone.history.start();
 
 
 		}

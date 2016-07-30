@@ -14,6 +14,10 @@ var RouteController = Marionette.Object.extend({
     console.log('index page CALLED');
   },
 
+	productEntry: function () {
+		console.log('hint productEntry route');
+	},
+
   initialize: function () {
     console.log(' route controller init' );
   }

@@ -10,15 +10,18 @@ define(function(require , exports, module ){
 
 	Router = Marionette.AppRouter.extend({
 
-    routes: {
+		
+    appRoutes: {
 
-      '/' : 'getIndex'
+      '' : 'getIndex',
+			'product/:entry': 'productEntry'
 
     },
 
     initialize: function(){
       console.log('<INIT>ROUTER</INIT>' );
-      this.controller = new RouteController();
+			this.controller = new RouteController(this.options);
+
     }
 
 	});
