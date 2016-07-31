@@ -89,7 +89,8 @@ gulp.task('develop',['build-dev'], function () {
   connect.server({
     livereload: true,
     port: 3000,
-    root: 'public'
+    root: 'public',
+    fallback: 'public/index.html'
 
   })
 });
