@@ -9,18 +9,25 @@ var $ = require('jquery')
 
 var RouteController = Marionette.Object.extend({
 
+	initialize: function () {
+		console.log(' route controller init' );
+	},
+
   getIndex: function () {
 
     console.log('index page CALLED');
   },
 
 	productEntry: function () {
-		console.log('hint productEntry route');
+		console.log('hint productEntry rout');
 	},
 
-  initialize: function () {
-    console.log(' route controller init' );
-  }
+
+	productList: function (options) {
+
+				console.log('product list');
+	}
+
 
 
 });

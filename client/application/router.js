@@ -10,11 +10,12 @@ define(function(require , exports, module ){
 
 	Router = Marionette.AppRouter.extend({
 
-		
+
     appRoutes: {
 
       '' : 'getIndex',
-			'product/:entry': 'productEntry'
+			'product/:id': 'productEntry',
+			'products': 'productList',
 
     },
 
@@ -23,6 +24,7 @@ define(function(require , exports, module ){
 			this.controller = new RouteController(this.options);
 
     }
+
 
 	});
 

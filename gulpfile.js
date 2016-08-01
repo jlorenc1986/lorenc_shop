@@ -91,6 +91,7 @@ gulp.task('develop',['build-dev'], function () {
     port: 3000,
     root: 'public',
     fallback: 'public/index.html'
+    // fallback: 'public/index.html'
 
   })
 });
