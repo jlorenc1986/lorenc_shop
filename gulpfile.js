@@ -87,14 +87,20 @@ gulp.task('test', function () {
 
 gulp.task('develop',['build-dev'], function () {
   connect.server({
-    livereload: true,
+
     port: 3000,
     root: 'public',
-    fallback: 'public/index.html'
+    host: 'lorenc_shop.dev',
+    fallback: 'public/index.html',
+    livereload: true
     // fallback: 'public/index.html'
 
   })
 });
+
+
+
+
 
 gulp.task('pre-commit', function(files){
 return true;
