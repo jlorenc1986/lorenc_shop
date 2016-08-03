@@ -4,6 +4,8 @@ define(function (require, exports, module) {
 var $ = require('jquery')
 		_ = require('underscore')
 		Backbone = require('backbone')
+		RootView = require('rootView'),
+		HomeView = require('homeView'),
 		Marionette = require('marionette');
 
 
@@ -11,6 +13,14 @@ var RouteController = Marionette.Object.extend({
 
 	initialize: function () {
 		console.log(' route controller init' );
+		this.options.regionManager = new Marionette.RegionManager({
+
+			navbar: ".ls-navbar",
+			content: ".ls-content"
+		});
+
+		this.options.Layout = new RootView();
+
 	},
 
   getIndex: function (options) {
