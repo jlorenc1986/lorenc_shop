@@ -12,17 +12,13 @@ define(function(require , exports, module ){
 
 
     appRoutes: {
-
       '' : 'getIndex',
 			'product/:id': 'productEntry',
 			'products': 'productList',
-
     },
 
     initialize: function(){
-      console.log('<INIT>ROUTER</INIT>' );
 			this.controller = new RouteController(this.options);
-
     }
 
 

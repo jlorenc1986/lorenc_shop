@@ -13,19 +13,20 @@ var RouteController = Marionette.Object.extend({
 		console.log(' route controller init' );
 	},
 
-  getIndex: function () {
+  getIndex: function (options) {
 
     console.log('index page CALLED');
   },
 
-	productEntry: function () {
+	productEntry: function (options) {
 		console.log('hint productEntry rout');
 	},
 
 
 	productList: function (options) {
+    console.log('product list');
 
-				console.log('product list');
+		// render correct subapp for prduct list in the region
 	}
 
 
