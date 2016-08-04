@@ -5,12 +5,12 @@ define(function (require, exports, module){
 		$ = require('jquery'),
 		_ = require('underscore'),
 		Backbone = require('backbone'),
-		Template = require('text!homeTempate'),
+		Template = require('text!homeTemplate'),
 		Marionette = require('marionette');
 
-	HomeView = Marionette.View.extend({
+	HomeView = Marionette.ItemView.extend({
 
-		el: '.ls-navbar-child',
+		el: '.ls-content-child',
 		template:  _.template(Template),
 
 		initialize: function (opts) {
@@ -21,7 +21,7 @@ define(function (require, exports, module){
 		render: function (){
 			var that = this;
 
-			console.log('render navbarView function');
+			console.log('home view function');
 			 that.$el.html(that.template);
 
 		}

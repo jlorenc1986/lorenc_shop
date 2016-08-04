@@ -26,6 +26,8 @@ var RouteController = Marionette.Object.extend({
   getIndex: function (options) {
 
     console.log('index page CALLED');
+		var childView = this.options.Layout;
+		 childView.showChildView('content', new HomeView());
   },
 
 	productEntry: function (options) {
