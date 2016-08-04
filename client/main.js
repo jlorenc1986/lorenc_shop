@@ -12,6 +12,8 @@ require.config({
 		"rootView": "../client/application/rootView",
 		"navbarTemplate": "../client/apps/navbar/templates/navbar-template.html",
 		"navbarView": "../client/apps/navbar/navbarView",
+		"homeTemplate": "../client/apps/home/templates/home-template.html",
+		"homeView": "../client/apps/home/homeView",
 		"RouteController": "../client/application/routeController",
 		"router": "../client/application/router",
 		"app": "../client/application/app"

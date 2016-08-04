@@ -5,23 +5,23 @@ define(function (require, exports, module){
 		$ = require('jquery'),
 		_ = require('underscore'),
 		Backbone = require('backbone'),
-		Template = require('text!navbarTemplate'),
+		Template = require('text!homeTemplate'),
 		Marionette = require('marionette');
 
-	NavbarView = Marionette.ItemView.extend({
+	HomeView = Marionette.ItemView.extend({
 
-		el: '.ls-navbar-child',
+		el: '.ls-content-child',
 		template:  _.template(Template),
 
 		initialize: function (opts) {
 
-			console.log('init navbarView');
+			console.log('init HomeView');
 		},
 
 		render: function (){
 			var that = this;
 
-			console.log('render navbarView function');
+			console.log('home view function');
 			 that.$el.html(that.template);
 
 		}
@@ -31,5 +31,5 @@ define(function (require, exports, module){
 
 	});
 
-	module.exports = NavbarView;
+	module.exports = HomeView;
 });
