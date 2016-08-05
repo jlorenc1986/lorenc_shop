@@ -6,6 +6,7 @@ var $ = require('jquery')
 		Backbone = require('backbone')
 		RootView = require('rootView'),
 		HomeView = require('homeView'),
+		ProductsAppView = require('productsAppView'),
 		Marionette = require('marionette');
 
 
@@ -25,7 +26,6 @@ var RouteController = Marionette.Object.extend({
 
   getIndex: function (options) {
 
-    console.log('index page CALLED');
 		var childView = this.options.Layout;
 		 childView.showChildView('content', new HomeView());
   },
@@ -36,7 +36,8 @@ var RouteController = Marionette.Object.extend({
 
 
 	productList: function (options) {
-    console.log('product list');
+		var childView = this.options.Layout;
+		 childView.showChildView('content', new ProductsAppView());
 
 		// render correct subapp for prduct list in the region
 	}
