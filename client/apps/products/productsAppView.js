@@ -6,6 +6,7 @@ define(function (require, exports, module){
 		_ = require('underscore'),
 		Backbone = require('backbone'),
 		Template = require('text!productsAppTemplate'),
+    ProductsListView = require('productsListView'),
 		Marionette = require('marionette');
 
 	ProductsAppView = Marionette.LayoutView.extend({
@@ -14,8 +15,9 @@ define(function (require, exports, module){
 		template:  _.template(Template),
 
     regions: {
-      toolbar : 'ls-productsAppToobar',
-      content : 'ls-productsAppContent'
+      toolbar: '.ls-productsAppToobar',
+      productContent: '.ls-productsAppContent'
+
     },
 
 		initialize: function (opts) {
@@ -27,7 +29,14 @@ define(function (require, exports, module){
 			var that = this;
 			that.$el.html(that.template);
 
-		}
+		},
+
+    onBeforeShow: function(){
+
+      this.showChildView('productContent', new ProductsListView());
+
+
+    }
 
 
 
