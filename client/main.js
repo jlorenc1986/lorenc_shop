@@ -16,6 +16,8 @@ require.config({
 		"homeView": "../client/apps/home/homeView",
 		"productTemplate": "../client/apps/products/templates/product-template.html",
 		"productView": "../client/apps/products/views/productView",
+		"productModel": "../client/apps/products/models/productModel",
+		"productsCollection": "../client/apps/products/collections/productsCollection",
 		"productsListTemplate": "../client/apps/products/templates/productsList-template.html",
 		"productsListView": "../client/apps/products/views/productsListView",
 		"productsAppTemplate": "../client/apps/products/templates/productsApp-template.html",
