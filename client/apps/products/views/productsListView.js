@@ -22,7 +22,6 @@ define(function (require, exports, module){
 
 			console.log('init productList View');
 			this.collection = new ProductsCollection();
-			this.collection.fetch();
 		},
 
 		render: function (){
@@ -33,6 +32,10 @@ define(function (require, exports, module){
 
 		onBeforeShow: function () {
 
+		},
+
+		collectionUpdated: function () {
+			console.log('collection updated');
 		}
 
 
