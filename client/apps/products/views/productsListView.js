@@ -22,6 +22,7 @@ define(function (require, exports, module){
 
 			console.log('init productList View');
 			this.collection = new ProductsCollection();
+			this.collection.on('change', this.collectionUpdated);
 		},
 
 		render: function (){
