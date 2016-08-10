@@ -17,11 +17,6 @@ define(function (require, exports, module) {
 
     initialize: function () {
       console.log('init product collection');
-			this.fetch({
-				success: this.fetchSuccess,
-				error: this.fetchError,
-			})
-
     },
 
     parse: function (response) {
@@ -40,5 +35,5 @@ define(function (require, exports, module) {
 	});
 
 	module.exports = ProductsCollection;
-	
+
 });

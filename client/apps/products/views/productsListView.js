@@ -22,11 +22,16 @@ define(function (require, exports, module){
 
 			console.log('init productList View');
 			this.collection = new ProductsCollection();
+			this.collection.add({});
+			this.collection.add({});
+			this.collection.add({});
 			this.collection.on('change', this.collectionUpdated);
 		},
 
 		render: function (){
 			var that = this;
+			var data = this.collection.toJSON();
+			var template = this.template(data);
 			that.$el.html(that.template);
 
 		},
