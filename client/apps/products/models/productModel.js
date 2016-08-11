@@ -9,8 +9,8 @@ define(function (require, exports, module) {
 	ProductModel = Backbone.Model.extend({
 
 		defaults: {
-			title: 'item',
-			completed: false,
+			title: 'Default product Title',
+			description: 'default description for item',
 			price: 0
 		},
 
@@ -18,14 +18,6 @@ define(function (require, exports, module) {
 			if (this.isNew()) {
 				this.set('created', Date.now());
 			}
-		},
-
-		toggle: function () {
-			return this.set('completed', !this.isCompleted());
-		},
-
-		isCompleted: function () {
-			return this.get('completed');
 		}
 	});
 
