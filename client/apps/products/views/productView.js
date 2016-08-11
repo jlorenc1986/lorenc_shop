@@ -10,20 +10,12 @@ define(function (require, exports, module){
 
 	ProductView = Marionette.ItemView.extend({
 
-		el: 'li',
 		template:  _.template(Template),
 
 		initialize: function (opts) {
 
 			console.log('init productView');
-		},
-
-		render: function (){
-			var that = this;
-			that.$el.html(that.template);
-
 		}
-
 
 
 

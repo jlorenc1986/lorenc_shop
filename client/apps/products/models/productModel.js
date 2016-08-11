@@ -9,9 +9,9 @@ define(function (require, exports, module) {
 	ProductModel = Backbone.Model.extend({
 
 		defaults: {
-			title: '',
+			title: 'item',
 			completed: false,
-			created: 0
+			price: 0
 		},
 
 		initialize: function () {
