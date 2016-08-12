@@ -13,12 +13,16 @@ define(function (require, exports, module){
 		template:  _.template(Template),
 
 		events: {
-			'click button': ''
-		}
+			'click .list-group-item .btn-sm': 'openDetail'
+		},
 
 		initialize: function (opts) {
 
 			console.log('init productView');
+		},
+
+		openDetail: function (event) {
+			console.log('detail');
 		}
 
 
