@@ -12,6 +12,10 @@ define(function (require, exports, module){
 
 		template:  _.template(Template),
 
+		events: {
+			'click button': ''
+		}
+
 		initialize: function (opts) {
 
 			console.log('init productView');
