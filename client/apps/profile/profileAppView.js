@@ -1,7 +1,7 @@
 define(function (require, exports, module){
 
 
-	var RootView,
+	var ProfileAppView,
 		$ = require('jquery'),
 		_ = require('underscore'),
 		Backbone = require('backbone'),
