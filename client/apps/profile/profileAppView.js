@@ -23,6 +23,8 @@ ProfileAppView = Marionette.LayoutView.extend({
 	initialize: function (opts) {
 
 			console.log('init ProfileAppView');
+			this.model = opts.model;
+			console.log('model', this.model );
 	},
 
 	render: function () {

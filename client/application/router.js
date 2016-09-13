@@ -14,7 +14,7 @@ define(function(require , exports, module ){
     appRoutes: {
       '' : 'getIndex',
 			'product/:id': 'productEntry',
-			'profile/:id': 'profileView',
+			'profile/:profile': 'profileView',
 			'products': 'productList'
     },
 

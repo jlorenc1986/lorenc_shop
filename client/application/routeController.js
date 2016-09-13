@@ -8,6 +8,7 @@ var $ = require('jquery')
 		HomeView = require('homeView'),
 		ProductsAppView = require('productsAppView'),
 		ProfileAppView = require('profileAppView'),
+		UserModel = require('UserModel'),
 		Marionette = require('marionette');
 
 var RouteController = Marionette.Object.extend({
@@ -41,7 +42,7 @@ var RouteController = Marionette.Object.extend({
 	profileView: function (options) {
 		console.log('tite' );
 		var childView = this.options.Layout;
-		childView.showChildView('content', new ProfileAppView());
+		childView.showChildView('content', new ProfileAppView({ model: UserModel}));
 	}
 
 

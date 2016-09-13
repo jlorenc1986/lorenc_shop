@@ -26,6 +26,7 @@ require.config({
 		"profileView": "../client/apps/profile/views/profileAppView",
 		"profileAppView": "../client/apps/profile/views/profileView",
 		"RouteController": "../client/application/routeController",
+		"UserModel": "../client/models/User",
 		"router": "../client/application/router",
 		"app": "../client/application/app"
 
