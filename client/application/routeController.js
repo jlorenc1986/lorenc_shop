@@ -2,20 +2,18 @@ define(function (require, exports, module) {
 
 
 var $ = require('jquery')
-		_ = require('underscore')
-		Backbone = require('backbone')
+		_ = require('underscore'),
+		Backbone = require('backbone'),
 		RootView = require('rootView'),
 		HomeView = require('homeView'),
 		ProductsAppView = require('productsAppView'),
+		ProfileAppView = require('profileAppView'),
 		Marionette = require('marionette');
-
 
 var RouteController = Marionette.Object.extend({
 
 	initialize: function () {
-		console.log(' route controller init' );
 		this.options.regionManager = new Marionette.RegionManager({
-
 			navbar: ".ls-navbar",
 			content: ".ls-content"
 		});
@@ -37,9 +35,13 @@ var RouteController = Marionette.Object.extend({
 
 	productList: function (options) {
 		var childView = this.options.Layout;
-		 childView.showChildView('content', new ProductsAppView());
+		childView.showChildView('content', new ProductsAppView());
+	},
 
-		// render correct subapp for prduct list in the region
+	profileView: function (options) {
+		console.log('tite' );
+		var childView = this.options.Layout;
+		childView.showChildView('content', new ProfileAppView());
 	}
 
 

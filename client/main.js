@@ -22,6 +22,9 @@ require.config({
 		"productsListView": "../client/apps/products/views/productsListView",
 		"productsAppTemplate": "../client/apps/products/templates/productsApp-template.html",
 		"productsAppView": "../client/apps/products/productsAppView",
+		"profileAppTemplate": "../client/apps/profile/templates/profileApp-template.html",
+		"profileView": "../client/apps/profile/views/profileAppView",
+		"profileAppView": "../client/apps/profile/views/profileView",
 		"RouteController": "../client/application/routeController",
 		"router": "../client/application/router",
 		"app": "../client/application/app"
