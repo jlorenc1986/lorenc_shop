@@ -23,12 +23,6 @@ describe('routes SPECS', function() {
     });
 
 
-    it('login route ', function(done) {
-
-        request(app).get('/login').expect(200, done);
-
-    });
-
       it('offers route ', function(done) {
 
         request(app).get('/offers').expect(200, done);
