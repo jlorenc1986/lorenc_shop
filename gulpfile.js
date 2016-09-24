@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sassLint = require('gulp-scss-lint'),
     eslint = require('gulp-eslint'),
-    guppy = require('git-guppy')(gulp),
     connect = require('gulp-connect'),
     del = require('del'),
     mocha = require('gulp-mocha');
@@ -15,39 +14,39 @@ gulp.task('react', function () {
 });
 
 gulp.task('lint-sass', function () {
-  return gulp.src('/styles/**/*.scss')
+    return gulp.src('/styles/**/*.scss')
     .pipe(sassLint());
 
 });
 
 gulp.task('cleanup-pre-build', function () {
-  return del([
-     'public'
-   ]);
+    return del([
+        'public'
+    ]);
 });
 
 gulp.task('clean', shell.task([
-   'rm -rf public'])
+    'rm -rf public'])
 );
 
 gulp.task('compile-rjs', ['cleanup-pre-build'],
       shell.task([
-       'rm -rf dist',
-       'node_modules/.bin/r.js -o build/app.build.js',
-        'mkdir public',
-        'mkdir public/vendor',
-        'cp node_modules/requirejs/require.js public/vendor/requirejs.js',
-        'cp node_modules/bootstrap/dist/css/bootstrap.min.css public/vendor/bootstrap.min.css'
+          'rm -rf dist',
+          'node_modules/.bin/r.js -o build/app.build.js',
+          'mkdir public',
+          'mkdir public/vendor',
+          'cp node_modules/requirejs/require.js public/vendor/requirejs.js',
+          'cp node_modules/bootstrap/dist/css/bootstrap.min.css public/vendor/bootstrap.min.css'
 
-        ])
+      ])
 );
 gulp.task('build-dev', ['compile-rjs'], function () {
 
-      return gulp.src('./client/*.js',{read: false})
+    return gulp.src('./client/*.js',{read: false})
       .pipe(
        shell([
-          'cp client/index.html public/index.html',
-          'cp dist/main.js public/main.js'
+           'cp client/index.html public/index.html',
+           'cp dist/main.js public/main.js'
        ])
      )
      .pipe(connect.reload());
@@ -55,7 +54,7 @@ gulp.task('build-dev', ['compile-rjs'], function () {
 
 gulp.task('compile-sass', function () {
 
-  return gulp.src('./styles/main.scss')
+    return gulp.src('./styles/main.scss')
     .pipe(sass())
     .pipe(gulp.dest('./public/stylesheets'))
     .pipe(connect.reload());
@@ -80,30 +79,30 @@ gulp.task('watch', function () {
 
 gulp.task('test', function () {
 
-        gulp.src('./test/*.js', { read: false })
+    gulp.src('./test/*.js', { read: false })
                 .pipe(mocha({ reporter: 'nyan' }));
 });
 
 
 gulp.task('develop',['build-dev'], function () {
-  connect.server({
+    connect.server({
 
-    port: 3000,
-    root: 'public',
-    host: 'lorenc_shop.dev',
-    fallback: 'public/index.html',
-    livereload: true
+        port: 3000,
+        root: 'public',
+        host: 'lorenc_shop.dev',
+        fallback: 'public/index.html',
+        livereload: true
     // fallback: 'public/index.html'
 
-  })
+    });
 });
 
 
 
 
 
-gulp.task('pre-commit', function(files){
-return true;
+gulp.task('pre-commit', function(){
+    return true;
 });
 
 gulp.task('default', ['develop', 'watch']);
