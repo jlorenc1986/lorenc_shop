@@ -1,33 +1,33 @@
 define(function (require, exports, module){
+    var ProductView,
+        $ = require('jquery'),
+        _ = require('underscore'),
+        Backbone = require('backbone'),
+        Template = require('text!productTemplate'),
+        ShowDetailsBehaviour = require('module'),
+        Marionette = require('marionette');
+
+    ProductView = Marionette.ItemView.extend({
 
 
-	var RootView,
-		$ = require('jquery'),
-		_ = require('underscore'),
-		Backbone = require('backbone'),
-		Template = require('text!productTemplate'),
-		Marionette = require('marionette');
+        template:  _.template(Template),
 
-	ProductView = Marionette.ItemView.extend({
+        events: {
+            'click .list-group-item .btn-sm': 'openDetail'
+        },
 
-		template:  _.template(Template),
+        behaviours: [ShowDetailsBehaviour],
 
-		events: {
-			'click .list-group-item .btn-sm': 'openDetail'
-		},
+        initialize: function (opts) {
+            console.log('init productView', opts);
+        },
 
-		initialize: function (opts) {
+        openDetail: function (event) {
+            console.log('detail', event);
+        }
 
-			console.log('init productView');
-		},
-
-		openDetail: function (event) {
-			console.log('detail');
-		}
+    });
 
 
-
-	});
-
-	module.exports = ProductView;
+    module.exports = ProductView;
 });

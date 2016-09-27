@@ -7,6 +7,27 @@ define(function (require, exports, module){
 
     ShowDetailsBehaviour = Marionette.Behaviour.extend({
 
+        defaults: {
+            message: 'message defaults'
+        },
+
+        ui: {
+            destroy: '.btn'
+        },
+
+        warnBeforeDestroy: function () {
+            console.log('warn before destroy' );
+            this.view.destroy();
+        },
+
+        events: {
+            'hover @ui.destroy': warnBeforeDestroy
+
+        }
+
+
+
+
     });
     module.exports = ShowDetailsBehaviour;
 });
