@@ -1,11 +1,11 @@
 define(function (require, exports, module){
-    var ShowDetailsBehaviour,
+    var ShowDetailsBehavior,
         $ = require('jquery'),
         _ = require('underscore'),
         Backbone = require('backbone'),
         Marionette = require('marionette');
 
-    ShowDetailsBehaviour = Marionette.Behaviour.extend({
+    ShowDetailsBehavior = Marionette.Behavior.extend({
 
         defaults: {
             message: 'message defaults'
@@ -15,19 +15,22 @@ define(function (require, exports, module){
             destroy: '.btn'
         },
 
+        events: {
+            'click @ui.destroy': 'warnBeforeDestroy'
+
+        },
+        onRender: function () {
+            console.log('janela' );
+        },
         warnBeforeDestroy: function () {
             console.log('warn before destroy' );
-            this.view.destroy();
-        },
-
-        events: {
-            'hover @ui.destroy': warnBeforeDestroy
-
         }
 
 
 
 
+
+
     });
-    module.exports = ShowDetailsBehaviour;
+    module.exports = ShowDetailsBehavior;
 });

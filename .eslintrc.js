@@ -9,6 +9,8 @@ module.exports = {
         "requirejs": true,
         "it": false,
         "describe": false,
+        "afterEach": false,
+        "beforeEach": false,
     },
     "extends": "eslint:recommended",
     "parserOptions": {

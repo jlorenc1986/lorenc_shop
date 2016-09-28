@@ -4,7 +4,7 @@ define(function (require, exports, module){
         _ = require('underscore'),
         Backbone = require('backbone'),
         Template = require('text!productTemplate'),
-        ShowDetailsBehaviour = require('module'),
+        ShowDetailsBehavior = require('ShowDetailsBehaviour'),
         Marionette = require('marionette');
 
     ProductView = Marionette.ItemView.extend({
@@ -16,7 +16,10 @@ define(function (require, exports, module){
             'click .list-group-item .btn-sm': 'openDetail'
         },
 
-        behaviours: [ShowDetailsBehaviour],
+        behaviors: [{
+            behaviorClass: ShowDetailsBehavior,
+            message: 'You are about to destroy all your data!'
+        }],
 
         initialize: function (opts) {
             console.log('init productView', opts);
