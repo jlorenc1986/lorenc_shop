@@ -26,7 +26,7 @@ require.config({
         'RouteController': '../client/application/routeController',
         'UserModel': '../client/models/User',
         'router': '../client/application/router',
-        'ShowDetailsBehaviour': '../client/behaviours/showDetailsBehavior',
+        'ShowDetailsBehaviour': '../client/behaviors/showDetailsBehavior',
         'app': '../client/application/app'
 
     },

@@ -18,7 +18,7 @@ define(function (require, exports, module){
 
         behaviors: [{
             behaviorClass: ShowDetailsBehavior,
-            message: 'You are about to destroy all your data!'
+            message: 'the details are .....'
         }],
 
         initialize: function (opts) {
