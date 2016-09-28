@@ -1,9 +1,9 @@
 define(function (require, exports, module){
 
     var ProfileAppView,
-        $ = require('jquery'),
+        // $ = require('jquery'),
         _ = require('underscore'),
-        Backbone = require('backbone'),
+        // Backbone = require('backbone'),
         Template = require('text!profileAppTemplate'),
         ProfileView = require('profileView'),
         Marionette = require('marionette');

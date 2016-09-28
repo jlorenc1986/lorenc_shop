@@ -2,7 +2,13 @@ module.exports = {
     "env": {
         "browser": true,
         "commonjs": true,
-        "es6": true
+        "es6": true,
+        "amd":true
+    },
+    "globals": {
+        "requirejs": true,
+        "it": false,
+        "describe": false,
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -13,9 +19,14 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "requirejs"
     ],
     "rules": {
+       "requirejs/no-invalid-define": 2,
+       "requirejs/no-multiple-define": 2,
+       "requirejs/no-named-define": 2,
+       "requirejs/no-object-define": 1,
         "indent": [
             "error",
             4
