@@ -34,6 +34,7 @@ gulp.task('compile-rjs', ['cleanup-pre-build'],
           'rm -rf dist',
           'node_modules/.bin/r.js -o build/app.build.js',
           'mkdir public',
+          'mkdir public/stylesheets',
           'mkdir public/vendor',
           'cp node_modules/requirejs/require.js public/vendor/requirejs.js',
           'cp node_modules/bootstrap/dist/css/bootstrap.min.css public/vendor/bootstrap.min.css'

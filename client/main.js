@@ -2,6 +2,7 @@ require.config({
     paths: {
 
         'jquery': '../node_modules/jquery/dist/jquery.min',
+        'tooltipster': '../node_modules/tooltipster/dist/js/tooltipster.bundle.min',
         'underscore': '../node_modules/underscore/underscore-min',
         'text': '../node_modules/text/text',
         'bootstrap': '../node_modules/bootstrap/dist/js/bootstrap.min',

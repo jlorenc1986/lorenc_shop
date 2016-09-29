@@ -73,6 +73,7 @@
     "sinon": "^1.17.4",
     "supertest": "^1.0.1",
     "tiny-lr": "^0.1.6",
+    "tooltipster": "^4.1.5",
     "vinyl-paths": "^2.1.0",
     "winston": "^1.0.0"
   }
