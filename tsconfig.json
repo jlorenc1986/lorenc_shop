@@ -3,6 +3,13 @@
         "module": "commonjs",
         "target": "es5",
         "noImplicitAny": false,
-        "sourceMap": false
-    }
+        "sourceMap": true,
+        "allowJs": true,
+        "outDir": "./build"
+    },
+
+    "files": [
+        "./typings/index.d.ts" ,
+        "./client/main.ts"
+    ]
 }
