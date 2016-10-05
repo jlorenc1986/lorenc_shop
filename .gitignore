@@ -34,3 +34,6 @@ dist
 
 # public folder
 public/*
+typings/*
+client/*.map
+build/
