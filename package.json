@@ -6,7 +6,7 @@
   "scripts": {
     "test": "NODE_ENV=test node_modules/.bin/mocha test/*.js",
     "start": "NODE_ENV=production node app.js",
-    "dev": "NODE_ENV=development node_modules/.bin/gulp default",
+    "dev": "NODE_ENV=development node_modules/.bin/webpack-dev-server --hot --inline --port 9090  --colors --cert --content-base client/public --devtool source-map",
     "env": "env",
     "build": "node_modules/.bin/r.js --help",
     "webpack": "node_modules/.bin/webpack --config webpack.conf.js",
@@ -57,6 +57,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-watch": "^4.2.4",
     "guppy-pre-commit": "^0.3.0",
+    "html-webpack-plugin": "^2.24.1",
     "jquery": "^2.1.4",
     "jscs": "^1.13.1",
     "jsdom": "^8.1.0",
@@ -82,6 +83,7 @@
     "typings": "^1.4.0",
     "vinyl-paths": "^2.1.0",
     "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2",
     "winston": "^1.0.0"
   }
 }

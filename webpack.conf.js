@@ -1,30 +1,19 @@
-module.exports = {
-    entry: './client/main.ts',
+var webpack = require('webpack');
+var path = require('path');
+
+
+var BUILD_DIR = path.resolve(__dirname, './client/public/');
+var APP_DIR = path.resolve(__dirname, './app');
+
+var config = {
+    entry: APP_DIR + '/main.js',
     output: {
-        filename: './build/bundle.js'
+        path: BUILD_DIR,
+        publicPath: '/assets/',
+        filename: 'bundle.js'
     },
-    devtools: 'source-map',
-    resolve: {
-        extensions: ['', '.webpack.js', 'web.js', '.ts', '.tsx', '.js']
-    },
-    module: {
-        loaders: [
-            // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
-            { test: /\.tsx?$/, loader: 'ts-loader' }
-        ],
-
-        preLoaders: [
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            { test: /\.js$/, loader: 'source-map-loader' }
-        ]
-    },
-
-    // When importing a module whose path matches one of the following, just
-    // assume a corresponding global variable exists and use that instead.
-    // This is important because it allows us to avoid bundling all of our
-    // dependencies, which allows browsers to cache those libraries between builds.
-    externals: {
-        '$': 'Jquery',
-        '_': 'underscore'
-    }
+    devServer: { inline: true }
 };
+
+
+module.exports = config;
