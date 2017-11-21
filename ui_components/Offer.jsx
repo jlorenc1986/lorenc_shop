@@ -1,30 +1,19 @@
-/* @jsx REACT.DOM */
+import React from 'react';
+import PropTypes from 'prop-types';
 
-var Offer = React.createClass({
+const Offer = (props) =>
+    <div className="offer">
+     {props.id}
+    </div>
 
-    click:function() {
-        console.log(' Offer clicked');
-    },
+Offer.propTypes = {
+    id: PropTypes.string
+}
 
-    render: function() {
-        return <table className="table table-hover">
-            <thead>
-                <tr>
-                    <th> id  </th>
-                    <th> name </th>
-                    <th> price </th>
-                </tr>
-            </thead>
-            <tbody>
+Offer.defaultProps = {
+    id: 'null'
+};
 
-                <tr>
-                        <td> { this.props.id } </td>
-                        <td> { this.props.name } </td>
-                        <td> { this.props.price } </td>
-                </tr>
+Offer.displayName = "Offer";
 
-
-            </tbody>
-        </table>
-    }
-});
+export default Offer;
