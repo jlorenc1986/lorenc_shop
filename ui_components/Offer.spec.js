@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Offer from './Offer.jsx';
+import Offer from './Offer';
 import { shallow } from 'enzyme';
 
 

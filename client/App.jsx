@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './App.css';
-import Offer from '../ui_components/Offer.jsx';
+import Offer from '../ui_components/Offer';
 
 export default class App extends React.Component {
   constructor(props) {
