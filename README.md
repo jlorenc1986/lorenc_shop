@@ -26,7 +26,7 @@ Isomorphic JS application
 
 # Architecture
 
-* SPA builded with : RequireJS , Backbone, Marionette and React
+* SPA builded with : React 16 
 * Express REST api 
 
 
