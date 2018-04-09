@@ -5,7 +5,7 @@ import styles from './App.css';
 const App = () => {
   return (
     <div className={styles.app} >
-      lorencShop Janela
+      lorencShop
     </div>
   );
 };
